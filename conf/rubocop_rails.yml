@@ -1,0 +1,9 @@
+inherit_from:
+  - ../conf/rubocop.yml
+
+Rails:
+  Enabled: true
+
+Rails/TimeZone:
+  Exclude:
+    - 'spec/**/*'

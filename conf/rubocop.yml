@@ -1,0 +1,19 @@
+inherit_from:
+  - ../conf/rubocop_without_rspec.yml
+
+require: rubocop-rspec
+
+RSpec/DescribeClass:
+  Enabled: false
+
+RSpec/DescribedClass:
+  Enabled: false
+
+RSpec/DescribeMethod:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/InstanceVariable:
+  Enabled: false
