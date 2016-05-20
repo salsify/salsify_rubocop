@@ -1,28 +1,98 @@
-# SalsifyRubocop
+# salsify_rubocop
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/salsify_rubocop`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem provides shared configuration for RuboCop for Salsify applications
+and gems.
 
-TODO: Delete this and the text above, and describe your gem
+[RuboCop](https://github.com/bbatsov/rubocop) is a static code analyzer that 
+can enforce style conventions as well as identify common problems.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'salsify_rubocop'
+group :development, :test do
+  gem 'salsify_rubocop', require: false
+end  
 ```
 
-And then execute:
+Or to your gem's gemspec file:
 
-    $ bundle
+```ruby
+spec.add_development_dependency 'salsify_rubocop'
+```
 
-Or install it yourself as:
+If you created your gem using 
+[cookiecutter-salsify-gem](https://github.com/salsify/cookiecutter-salsify-gem)
+then this dependency was added automatically.
 
-    $ gem install salsify_rubocop
+Then execute:
 
+    $ bundle install
+
+It's best to ensure that you're starting from the latest release, so execute:
+
+    $ bundle update salsify_rubocop
+
+## Configuration
+
+To use one of the shared RuboCop configurations from this gem, you must define
+a `.rubocop.yml` file at the top-level directory in your project:
+
+```yaml
+inherit_gem:
+  salsify_rubocop: conf/rubocop_rails.yml
+```
+
+Further customization of RuboCop for your local project may also be added to
+this file.
+
+### Available Configurations
+
+- **rubocop_rails**: For Rails projects, this inherits from **rubocop**.
+- **rubocop**: Assumes RSpec is used and requires 
+  [rubocop-rspec](https://github.com/nevir/rubocop-rspec). This configuration
+  is the default for gems. This inherits from **rubocop_without_rspec**.
+- **rubocop_without_rspec**: Configuration without `rubocop-rspec`. This is 
+  intended for gems that we may have forked and taken ownership of without
+  converting tests from a different framework.
+  
 ## Usage
 
-TODO: Write usage instructions here
+Run `rubocop` for an entire project:
+
+    $ bundle exec rubocop --format fu
+    
+See the `rubocop` command-line for additional options including auto-generating
+configuration for existing offenses and auto-correction.
+
+### Overcommit
+
+Consider using [overcommit](https://github.com/brigade/overcommit) to 
+automatically run `rubocop` on changed files before committing.
+
+This is automatically added by 
+[cookiecutter-salsify-gem](https://github.com/salsify/cookiecutter-salsify-gem/blob/master/%7B%7Bcookiecutter.repo_name%7D%7D/.overcommit.yml).
+
+### CI
+
+Consider running `rubocop` prior to running tests in CI for your project. 
+
+TODO: add more info here.
+
+## Versioning
+
+This gem is versioned based on the MAJOR.MINOR version of `rubocop`. The first
+release of the `salsify_rubocop` gem was v0.40.0.
+
+The patch version for this gem does _not_ correspond to the patch version of 
+`rubocop`. The patch version for this gem will change any time that one of its
+configurations is modified _or_ its dependency on `rubocop` is changed to require
+a different patch version.
+
+This gem also includes a dependency on `rubocop-rspec` that will be updated to
+the latest compatible version each time that the MAJOR.MINOR version of `rubocop` 
+is updated.
 
 ## Development
 
