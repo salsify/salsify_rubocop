@@ -1,6 +1,6 @@
 # salsify_rubocop
 
-## v0.40.1 (unreleased)
+## v0.40.1
 - Changes to `rubocop_without_rspec` configuration:
 
         Performance/RedundantMerge:
