@@ -12,6 +12,9 @@ AllCops:
 Lint/AmbiguousOperator:
   Enabled: false
 
+Performance/RedundantMerge:
+  MaxKeyValuePairs: 1
+
 Style/Alias:
   EnforcedStyle: prefer_alias_method
 
@@ -54,6 +57,9 @@ Style/GuardClause:
 Style/Lambda:
   Enabled: false
 
+Style/ModuleFunction:
+  Enabled: false
+
 Style/MultilineMethodCallIndentation:
   Enabled: false
 
@@ -65,6 +71,9 @@ Style/MultilineBlockLayout:
 
 Style/Proc:
   Enabled: false
+
+Style/RaiseArgs:
+  EnforcedStyle: compact
 
 Style/RegexpLiteral:
   Enabled: false
