@@ -1,5 +1,4 @@
 AllCops:
-  TargetRubyVersion: 2.3
   Exclude:
     - 'bin/**/*'
     - 'coverage/**/*'
@@ -26,6 +25,11 @@ Style/Documentation:
 
 Style/DoubleNegation:
   Enabled: false
+
+# auto-correct is broken for this cop:
+# https://github.com/bbatsov/rubocop/issues/3271
+Style/EachForSimpleLoop:
+  AutoCorrect: false
 
 Style/EachWithObject:
   Enabled: false
@@ -58,7 +62,7 @@ Style/Lambda:
   Enabled: false
 
 Style/ModuleFunction:
-  Enabled: false
+  EnforcedStyle: extend_self
 
 Style/MultilineMethodCallIndentation:
   Enabled: false
@@ -67,6 +71,10 @@ Style/MultilineOperationIndentation:
   Enabled: false
 
 Style/MultilineBlockLayout:
+  Enabled: false
+
+# This cop complains about values like 05.
+Style/NumericLiteralPrefix:
   Enabled: false
 
 Style/Proc:
