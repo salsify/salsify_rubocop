@@ -1,0 +1,9 @@
+Salsify/RspecDocString:
+  Description: 'Check that RSpec doc strings use the correct quoting.'
+  Enabled: true
+  EnforcedStyle: double_quotes
+  SupportedStyles:
+    - single_quotes
+    - double_quotes
+  Include:
+    - 'spec/**/*'
