@@ -1,5 +1,9 @@
 # salsify_rubocop
 
+## v0.42.0
+- Update to RuboCop v0.42.
+- Add `Salsify/RspecDocString` cop to check quoting for examples/example groups.
+
 ## v0.41.0
 - `.ruby-version` can be used to determine TargetRubyVersion in RuboCop v0.41
 - Change to `rubocop_rails` configuration:
