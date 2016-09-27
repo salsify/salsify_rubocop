@@ -4,7 +4,7 @@
 describe RuboCop::Cop::Salsify::RspecDocString, :config do
   subject(:cop) { described_class.new(config) }
 
-  shared_examples_for 'always accepted strings' do |name|
+  shared_examples_for "always accepted strings" do |name|
     it "accepts `#{name}` with a single character" do
       inspect_source(cop, ["#{name} ?a do", 'end'])
       expect(cop.offenses).to be_empty
@@ -44,7 +44,7 @@ describe RuboCop::Cop::Salsify::RspecDocString, :config do
         expect(cop.offenses).to be_empty
       end
 
-      it_behaves_like 'always accepted strings', name
+      it_behaves_like "always accepted strings", name
     end
   end
 
@@ -70,7 +70,7 @@ describe RuboCop::Cop::Salsify::RspecDocString, :config do
         expect(cop.offenses).to be_empty
       end
 
-      it_behaves_like 'always accepted strings', name
+      it_behaves_like "always accepted strings", name
     end
   end
 end

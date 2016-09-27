@@ -4,7 +4,7 @@
 describe RuboCop::Cop::Salsify::RspecStringLiterals, :config do
   subject(:cop) { described_class.new(config) }
 
-  shared_examples_for 'string quoting exceptions' do |name|
+  shared_examples_for "string quoting exceptions" do |name|
     it "accepts `#{name}` with a single character" do
       inspect_source(cop, ["#{name} 'ignored' do", '?a', 'end'])
       expect(cop.offenses).to be_empty
@@ -42,7 +42,7 @@ describe RuboCop::Cop::Salsify::RspecStringLiterals, :config do
           expect(cop.offenses).to be_empty
         end
 
-        it_behaves_like 'string quoting exceptions', name
+        it_behaves_like "string quoting exceptions", name
       end
     end
   end
@@ -67,7 +67,7 @@ describe RuboCop::Cop::Salsify::RspecStringLiterals, :config do
           expect(cop.offenses).to be_empty
         end
 
-        it_behaves_like 'string quoting exceptions', name
+        it_behaves_like "string quoting exceptions", name
       end
     end
   end

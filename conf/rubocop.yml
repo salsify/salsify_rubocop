@@ -15,6 +15,7 @@ RSpec/DescribeMethod:
 RSpec/ExampleLength:
   Enabled: false
 
+# See https://github.com/backus/rubocop-rspec/issues/198
 RSpec/ExpectActual:
   Exclude:
   - 'spec/routing/**/*'

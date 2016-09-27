@@ -12,6 +12,8 @@
   using `Style/AlignHash`.
 - Add `Salsify/RspecStringLiterals` cop to check non-doc string quotes for
   examples/example groups.
+- Modify `Salsify/RspecDocString` to treat names for shared groups and shared
+  example as doc strings.
 
 ## v0.42.0
 - Update to RuboCop v0.42.
