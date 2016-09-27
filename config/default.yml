@@ -7,3 +7,14 @@ Salsify/RspecDocString:
     - double_quotes
   Include:
     - 'spec/**/*'
+
+Salsify/RspecStringLiterals:
+  Description: 'Enforce consistent quote style for non-doc strings in RSpec tests.'
+  Enabled: true
+  EnforcedStyle: single_quotes
+  SupportedStyles:
+    - single_quotes
+    - double_quotes
+#  Include:
+#    - 'spec/**/*'
+

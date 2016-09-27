@@ -1,5 +1,18 @@
 # salsify_rubocop
 
+## v0.43.0
+- Update to `rubocop` v0.43.0.
+- Update to `rubocop-rspec` v1.7.0.
+- Disable new RSpec cops: `LeadingSubject`, `LetSetup`, `MultipleExpectations`,
+  and `NestedGroups`.
+- Disable new cop `RSpec/ExpectActual` for routing specs.
+- Disable problematic cops `Style/NumericPredicate`, `Style/SafeNavigation`,
+  and `Style/VariableNumber`.
+- Disable `Style/IndentHash`, which applies to the first line, since we are not
+  using `Style/AlignHash`.
+- Add `Salsify/RspecStringLiterals` cop to check non-doc string quotes for
+  examples/example groups.
+
 ## v0.42.0
 - Update to RuboCop v0.42.
 - Add `Salsify/RspecDocString` cop to check quoting for examples/example groups.

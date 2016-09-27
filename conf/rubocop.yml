@@ -3,11 +3,6 @@ inherit_from:
 
 require: salsify_rubocop
 
-# See https://github.com/bbatsov/rubocop/pull/3343
-Style/NumericPredicate:
-  Exclude:
-    - 'spec/**/*'
-
 RSpec/DescribeClass:
   Enabled: false
 
@@ -20,5 +15,21 @@ RSpec/DescribeMethod:
 RSpec/ExampleLength:
   Enabled: false
 
+RSpec/ExpectActual:
+  Exclude:
+  - 'spec/routing/**/*'
+
 RSpec/InstanceVariable:
+  Enabled: false
+
+RSpec/LeadingSubject:
+  Enabled: false
+
+RSpec/LetSetup:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/NestedGroups:
   Enabled: false

@@ -1,4 +1,5 @@
 # encoding utf-8
+# frozen_string_literal: true
 
 describe RuboCop::Cop::Salsify::RspecDocString, :config do
   subject(:cop) { described_class.new(config) }
@@ -68,6 +69,8 @@ describe RuboCop::Cop::Salsify::RspecDocString, :config do
                        ])
         expect(cop.offenses).to be_empty
       end
+
+      it_behaves_like 'always accepted strings', name
     end
   end
 end

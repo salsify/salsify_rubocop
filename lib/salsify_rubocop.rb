@@ -14,3 +14,4 @@ RuboCop::ConfigLoader.instance_variable_set(:@default_configuration, config)
 
 # cops
 require 'rubocop/cop/salsify/rspec_doc_string'
+require 'rubocop/cop/salsify/rspec_string_literals'
