@@ -1,7 +1,13 @@
 # Monkey-patch SelectorSet to allow enumeration of selectors.
 
-class RuboCop::RSpec::Language::SelectorSet
-  def each(&blk)
-    selectors.each(&blk)
+module RuboCop
+  module RSpec
+    module Language
+      class SelectorSet
+        def each(&blk)
+          selectors.each(&blk)
+        end
+      end
+    end
   end
 end
