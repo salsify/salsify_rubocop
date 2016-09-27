@@ -6,18 +6,18 @@ describe RuboCop::Cop::Salsify::RspecStringLiterals, :config do
 
   shared_examples_for 'string quoting exceptions' do |name|
     it "accepts `#{name}` with a single character" do
-      inspect_source(cop, ["#{name} 'ignored' do", "?a", 'end'])
+      inspect_source(cop, ["#{name} 'ignored' do", '?a', 'end'])
       expect(cop.offenses).to be_empty
     end
 
     it "accepts `#{name}` with a %q string" do
-      inspect_source(cop, ["#{name} 'ignored' do", "%q(doc string)", 'end'])
+      inspect_source(cop, ["#{name} 'ignored' do", '%q(doc string)', 'end'])
       expect(cop.offenses).to be_empty
     end
 
     it "accepts `#{name}` with a string the requires interpolation" do
       doc_string = '"#{\'DOC\'.downcase} string"'
-      inspect_source(cop, ["#{name} 'ignored' do", "#{doc_string}", 'end'])
+      inspect_source(cop, ["#{name} 'ignored' do", doc_string, 'end'])
       expect(cop.offenses).to be_empty
     end
   end
