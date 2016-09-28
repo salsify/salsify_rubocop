@@ -30,13 +30,14 @@ module RuboCop
         DOUBLE_QUOTE_MSG =
           'Example Group/Example doc strings must be double-quoted.'.freeze
 
-        DOCUMENTED_METHODS = [
-          :example_group, :describe, :context, :xdescribe, :xcontext,
-          :it, :example, :specify, :xit, :xexample, :xspecify,
-          :feature, :scenario, :xfeature, :xscenario,
-          :fdescribe, :fcontext, :focus, :fexample, :fit, :fspecify,
-          :ffeature, :fscenario
-        ].to_set.freeze
+        SHARED_EXAMPLES = RuboCop::RSpec::Language::SelectorSet.new(
+          %i(include_examples it_behaves_like it_should_behave_like include_context)
+        ).freeze
+
+        DOCUMENTED_METHODS = (RuboCop::RSpec::Language::ExampleGroups::ALL +
+          RuboCop::RSpec::Language::Examples::ALL +
+          RuboCop::RSpec::Language::SharedGroups::ALL +
+          SHARED_EXAMPLES).freeze
 
         def on_send(node)
           _receiver, method_name, *args = *node

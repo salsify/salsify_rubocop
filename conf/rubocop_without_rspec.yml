@@ -58,6 +58,10 @@ Style/FrozenStringLiteralComment:
 Style/GuardClause:
   Enabled: false
 
+# does not make sense to enable this without AlignHash
+Style/IndentHash:
+  Enabled: false
+
 Style/Lambda:
   Enabled: false
 
@@ -77,6 +81,10 @@ Style/MultilineBlockLayout:
 Style/NumericLiteralPrefix:
   Enabled: false
 
+# This cop is problematic when nil may be compared with 0.
+Style/NumericPredicate:
+  Enabled: false
+
 Style/Proc:
   Enabled: false
 
@@ -84,6 +92,9 @@ Style/RaiseArgs:
   EnforcedStyle: compact
 
 Style/RegexpLiteral:
+  Enabled: false
+
+Style/SafeNavigation:
   Enabled: false
 
 # This cop doesn't work properly if you a have a block with
@@ -98,6 +109,9 @@ Style/StringLiterals:
   EnforcedStyle: single_quotes
   Exclude:
     - 'spec/**/*'
+
+Style/VariableNumber:
+  Enabled: false
 
 Metrics/AbcSize:
   Enabled: false
