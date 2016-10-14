@@ -1,5 +1,10 @@
 # salsify_rubocop
 
+## v0.44.0
+- Update to `rubocop` v0.44.1.
+- Disable new RSpec cops: `Metrics/BlockLength` and
+  `Rails/HttpPositionalArguments`.
+
 ## v0.43.0
 - Update to `rubocop` v0.43.0.
 - Update to `rubocop-rspec` v1.7.0.
