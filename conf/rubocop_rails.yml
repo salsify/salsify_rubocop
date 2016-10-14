@@ -4,6 +4,10 @@ inherit_from:
 Rails:
   Enabled: true
 
+# Enforces Rails 5 conventions. Auto-correct removes parens around args :(
+Rails/HttpPositionalArguments:
+  Enabled: false
+
 Rails/TimeZone:
   Exclude:
     - 'spec/**/*'
