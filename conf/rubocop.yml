@@ -29,6 +29,9 @@ RSpec/LeadingSubject:
 RSpec/LetSetup:
   Enabled: false
 
+RSpec/MessageExpectation:
+  Enabled: true
+
 RSpec/MultipleExpectations:
   Enabled: false
 

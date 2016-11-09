@@ -1,8 +1,13 @@
 # salsify_rubocop
 
+## v0.45.0
+- Update to `rubocop` v0.45.0 and `rubocop-rspec` v1.8.0.
+- Explicitly enable `Rspec/MessageExpectation` cop that is now disabled
+  by default.
+
 ## v0.44.0
 - Update to `rubocop` v0.44.1.
-- Disable new RSpec cops: `Metrics/BlockLength` and
+- Disable new cops: `Metrics/BlockLength` and
   `Rails/HttpPositionalArguments`.
 
 ## v0.43.0
