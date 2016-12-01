@@ -26,9 +26,9 @@ module RuboCop
         include ConfigurableEnforcedStyle
 
         SINGLE_QUOTE_MSG =
-          'Example Group/Example doc strings must be single-quoted.'.freeze
+          'Example Group/Example doc strings must be single-quoted.'
         DOUBLE_QUOTE_MSG =
-          'Example Group/Example doc strings must be double-quoted.'.freeze
+          'Example Group/Example doc strings must be double-quoted.'
 
         SHARED_EXAMPLES = RuboCop::RSpec::Language::SelectorSet.new(
           %i(include_examples it_behaves_like it_should_behave_like include_context)

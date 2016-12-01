@@ -8,6 +8,9 @@ AllCops:
     - 'tmp/**/*'
     - 'vendor/**/*'
 
+Bundler/OrderedGems:
+  Enabled: false
+
 Lint/AmbiguousOperator:
   Enabled: false
 
@@ -52,6 +55,9 @@ Style/EmptyLinesAroundMethodBody:
 Style/EmptyLiteral:
   Enabled: false
 
+Style/EmptyMethod:
+  Enabled: false
+
 Style/FrozenStringLiteralComment:
   Enabled: false
 
@@ -67,6 +73,9 @@ Style/Lambda:
 
 Style/ModuleFunction:
   EnforcedStyle: extend_self
+
+Style/MultilineBlockChain:
+  Enabled: false
 
 Style/MultilineMethodCallIndentation:
   Enabled: false
@@ -97,13 +106,16 @@ Style/RegexpLiteral:
 Style/SafeNavigation:
   Enabled: false
 
+Style/SignalException:
+  EnforcedStyle: only_raise
+
+Style/SingleLineBlockParams:
+  Enabled: false
+
 # This cop doesn't work properly if you a have a block with
 # arguments split across multiple lines
 Style/SpaceAroundBlockParameters:
   Enabled: false
-
-Style/SignalException:
-  EnforcedStyle: only_raise
 
 Style/StringLiterals:
   EnforcedStyle: single_quotes
