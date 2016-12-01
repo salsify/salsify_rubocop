@@ -1,5 +1,4 @@
 # encoding: utf-8
-# frozen_string_literal: true
 
 module RuboCop
   module Cop
@@ -19,9 +18,9 @@ module RuboCop
         DOCUMENTED_METHODS = RuboCop::Cop::Salsify::RspecDocString::DOCUMENTED_METHODS
 
         SINGLE_QUOTE_MSG = 'Prefer single-quoted strings unless you need ' \
-          'interpolation or special symbols.'
+          'interpolation or special symbols.'.freeze
         DOUBLE_QUOTE_MSG = 'Prefer double-quoted strings unless you need ' \
-          'single quotes to avoid extra backslashes for escaping.'
+          'single quotes to avoid extra backslashes for escaping.'.freeze
 
         private
 
