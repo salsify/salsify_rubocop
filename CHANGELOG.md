@@ -1,5 +1,7 @@
 # salsify_rubocop
 
+# TODO: revisit Bundler/OrderedGems when auto-correct is available.
+
 ## v0.46.0
 - Update to `rubocop` v0.46.0.
 - Disable new cops: `Bundler/OrderedGems` and `Style/EmptyMethod`.
