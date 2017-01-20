@@ -1,6 +1,10 @@
 # salsify_rubocop
 
-# TODO: revisit Bundler/OrderedGems when auto-correct is available.
+## v0.47.0
+- Update to `rubocop` v0.47.1 and `rubocop-rspec` v1.10.0.
+- Enable `Bundler/OrderedGems` now that auto-correct is supported.
+- Disable new cop `Rails/FilePath`.
+- Add `DisplayCopNames: true` default for `AllCops`.
 
 ## v0.46.0
 - Update to `rubocop` v0.46.0.

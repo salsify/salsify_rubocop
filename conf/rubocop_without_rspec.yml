@@ -1,4 +1,5 @@
 AllCops:
+  DisplayCopNames: true
   Exclude:
     - 'bin/**/*'
     - 'coverage/**/*'
@@ -7,9 +8,6 @@ AllCops:
     - 'public/**/*'
     - 'tmp/**/*'
     - 'vendor/**/*'
-
-Bundler/OrderedGems:
-  Enabled: false
 
 Lint/AmbiguousOperator:
   Enabled: false

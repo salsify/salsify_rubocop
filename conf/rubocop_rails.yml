@@ -4,6 +4,9 @@ inherit_from:
 Rails:
   Enabled: true
 
+Rails/FilePath:
+  Enabled: false
+
 # Enforces Rails 5 conventions. Auto-correct removes parens around args :(
 Rails/HttpPositionalArguments:
   Enabled: false
@@ -13,4 +16,4 @@ Rails/TimeZone:
     - 'spec/**/*'
 
 Rails/UniqBeforePluck:
-  EnforcedMode: aggressive
+  EnforcedStyle: aggressive
