@@ -4,6 +4,7 @@
 - Update to `rubocop` v0.47.1 and `rubocop-rspec` v1.10.0.
 - Enable `Bundler/OrderedGems` now that auto-correct is supported.
 - Disable new cop `Rails/FilePath`.
+- Disable `RSpec/MessageExpectation` and use `RSpec/MessageSpies` instead.
 - Add `DisplayCopNames: true` default for `AllCops`.
 
 ## v0.46.0
