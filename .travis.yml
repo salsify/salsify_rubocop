@@ -1,7 +1,11 @@
 language: ruby
 rvm:
-  - 2.2.4
+  - 2.4.0
   - 2.3.3
+  - 2.2.6
+before_install:
+  # Workaround for https://github.com/sickill/rainbow/issues/48
+  - gem update --system
 script:
   - bundle exec rubocop
   - bundle exec rspec
