@@ -2,6 +2,8 @@
 
 ## v0.47.1
 - Add `Salsify/StyleDig` cop to recommend using `#dig` for deeply nested access.
+- Add `Salsify/RailsApplicationRecord` cop.
+- Add new `rubocop_rails50` configuration for use with Rails 5.0 apps.
 
 ## v0.47.0
 - Update to `rubocop` v0.47.1 and `rubocop-rspec` v1.10.0.
