@@ -6,8 +6,6 @@ module RuboCop
       # Check that doc strings for example groups and examples use either
       # single-quoted or double-quoted strings based on the enforced style.
       #
-      # This cop is disabled by default.
-      #
       # @example
       #
       #   # When EnforcedStyle is double_quotes

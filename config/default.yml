@@ -18,3 +18,8 @@ Salsify/RspecStringLiterals:
 #  Include:
 #    - 'spec/**/*'
 
+Salsify/StyleDig:
+  Description: 'Recommend `dig` for deeply nested access.'
+  Enabled: true
+  AutoCorrect: false
+
