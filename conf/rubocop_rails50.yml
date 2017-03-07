@@ -1,0 +1,8 @@
+inherit_from:
+  - ../conf/rubocop_rails.yml
+
+Rails/HttpPositionalArguments:
+  Enabled: true
+
+Salsify/RailsApplicationRecord:
+  Enabled: true
