@@ -28,7 +28,7 @@ module RuboCop
         PATTERN
 
         def on_send(node)
-          nested_access_match(node) do
+          if nested_access_match(node) && !conditional_assignment?(node)
             match_node = node
             # walk to outermost access node
             match_node = match_node.parent while access_node?(match_node.parent)
@@ -54,6 +54,10 @@ module RuboCop
         end
 
         private
+
+        def conditional_assignment?(node)
+          node.parent && node.parent.or_asgn_type? && (node.parent.children.first == node)
+        end
 
         def access_node?(node)
           node && node.send_type? && node.method_name == :[]

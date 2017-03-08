@@ -50,4 +50,18 @@ describe RuboCop::Cop::Salsify::StyleDig, :config, :ruby23 do
     expect(cop.messages).to eq(msgs)
     expect(autocorrect_source(cop, source)).to eq('hash.dig(one, two).foo')
   end
+
+  it "accepts nested access on conditional assignment" do
+    source = 'foo[bar][baz] ||= 1'
+    inspect_source(cop, source)
+    expect(cop.offenses).to be_empty
+  end
+
+  it "corrects nested access in the value for conditional assignment" do
+    source = 'blah ||= foo[bar][baz]'
+    inspect_source(cop, source)
+    expect(cop.highlights).to eq(['foo[bar][baz]'])
+    expect(cop.messages).to eq(msgs)
+    expect(autocorrect_source(cop, source)).to eq('blah ||= foo.dig(bar, baz)')
+  end
 end
