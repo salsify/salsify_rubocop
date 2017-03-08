@@ -1,5 +1,9 @@
 # salsify_rubocop
 
+## v0.47.2
+- Fix issue for `Salsify/Style` with nested access as the target for
+  conditional assignment.
+
 ## v0.47.1
 - Add `Salsify/StyleDig` cop to recommend using `#dig` for deeply nested access.
 - Add `Salsify/RailsApplicationRecord` cop.
