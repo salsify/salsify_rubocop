@@ -23,7 +23,7 @@ describe RuboCop::Cop::Salsify::RspecStringLiterals, :config do
   end
 
   context "when the enforced style is `single_quotes` (default)" do
-    let(:cop_config) { { 'EnforcedStyle' => 'single_quotes' } }
+    let(:cop_config) { { 'EnforcedStyle' => 'single_quotes', 'Include' => ['**/*'] } }
 
     described_class::DOCUMENTED_METHODS.each do |name|
       context "within #{name}" do
@@ -48,7 +48,7 @@ describe RuboCop::Cop::Salsify::RspecStringLiterals, :config do
   end
 
   context "when the enforced style is `double_quotes`" do
-    let(:cop_config) { { 'EnforcedStyle' => 'double_quotes' } }
+    let(:cop_config) { { 'EnforcedStyle' => 'double_quotes', 'Include' => ['**/*'] } }
 
     described_class::DOCUMENTED_METHODS.each do |name|
       context "within #{name}" do

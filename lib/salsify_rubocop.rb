@@ -15,5 +15,6 @@ RuboCop::ConfigLoader.instance_variable_set(:@default_configuration, config)
 # cops
 require 'rubocop/cop/salsify/rails_application_record'
 require 'rubocop/cop/salsify/rspec_doc_string'
+require 'rubocop/cop/salsify/rspec_dot_not_self_dot'
 require 'rubocop/cop/salsify/rspec_string_literals'
 require 'rubocop/cop/salsify/style_dig'

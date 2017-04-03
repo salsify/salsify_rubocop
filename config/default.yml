@@ -12,6 +12,12 @@ Salsify/RspecDocString:
   Include:
     - 'spec/**/*'
 
+Salsify/RspecDotNotSelfDot:
+  Description: 'Enforce ".<class method>" instead of "self.<class method>" for example group description.'
+  Enabled: true
+  Include:
+    - 'spec/**/*'
+
 Salsify/RspecStringLiterals:
   Description: 'Enforce consistent quote style for non-doc strings in RSpec tests.'
   Enabled: true
@@ -19,8 +25,8 @@ Salsify/RspecStringLiterals:
   SupportedStyles:
     - single_quotes
     - double_quotes
-#  Include:
-#    - 'spec/**/*'
+  Include:
+    - 'spec/**/*'
 
 Salsify/StyleDig:
   Description: 'Recommend `dig` for deeply nested access.'
