@@ -60,7 +60,7 @@ module RuboCop
           src = node.source
           return false if src.start_with?('%', '?')
           if style == :single_quotes
-            src !~ /^'/ && !double_quotes_acceptable?(node.str_content)
+            src !~ /^'/ && !needs_escaping?(node.str_content)
           else
             src !~ /^" | \\ | \#/x
           end

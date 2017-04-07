@@ -2,8 +2,9 @@
 # frozen_string_literal: true
 
 describe RuboCop::Cop::Salsify::StyleDig, :config, :ruby23 do
-  subject(:cop) { described_class.new(config) }
   let(:msgs) { [described_class::MSG] }
+
+  subject(:cop) { described_class.new(config) }
 
   it "accepts non-nested access" do
     source = 'ary[0]'

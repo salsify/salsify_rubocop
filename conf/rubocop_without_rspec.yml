@@ -9,6 +9,10 @@ AllCops:
     - 'tmp/**/*'
     - 'vendor/**/*'
 
+# This cop has poor handling for the common case of a lambda arg in a DSL
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
 Lint/AmbiguousOperator:
   Enabled: false
 
@@ -56,6 +60,12 @@ Style/EmptyLiteral:
 Style/EmptyMethod:
   Enabled: false
 
+# The Exclude list is not additive. Projects that exclude file names will
+# need to re-add Appraisals.
+Style/FileName:
+  Exclude:
+    - 'Appraisals'
+
 Style/FrozenStringLiteralComment:
   Enabled: false
 
@@ -92,6 +102,10 @@ Style/NumericLiteralPrefix:
 Style/NumericPredicate:
   Enabled: false
 
+# This cop is unstable.
+Style/PercentLiteralDelimiters:
+  Enabled: false
+
 Style/Proc:
   Enabled: false
 
@@ -119,6 +133,10 @@ Style/StringLiterals:
   EnforcedStyle: single_quotes
   Exclude:
     - 'spec/**/*'
+
+# We don't require %i() for an array of symbols.
+Style/SymbolArray:
+  Enabled: false
 
 Style/VariableNumber:
   Enabled: false

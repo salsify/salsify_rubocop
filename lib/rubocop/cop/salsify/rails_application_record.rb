@@ -1,5 +1,7 @@
 # encoding: utf-8
+
 require 'rubocop'
+
 module RuboCop
   module Cop
     module Salsify
