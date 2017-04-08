@@ -6,7 +6,7 @@ module RuboCop
   module Cop
     module Salsify
       # Check that serializers subclass ApplicationSerializer
-      class DandelionApplicationSerializer < Cop
+      class RailsApplicationSerializer < Cop
 
         MSG = 'Serializers must subclass ApplicationSerializer'.freeze
         APPLICATION_SERIALIZER = 'ApplicationSerializer'.freeze

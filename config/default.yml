@@ -1,4 +1,4 @@
-Salsify/DandelionApplicationSerializer:
+Salsify/RailsApplicationSerializer:
   Description: 'Serializers must subclass ApplicationSerializer.'
   Enabled: false
 

@@ -13,7 +13,7 @@ config = RuboCop::ConfigLoader.merge_with_default(config, path)
 RuboCop::ConfigLoader.instance_variable_set(:@default_configuration, config)
 
 # cops
-require 'rubocop/cop/salsify/dandelion_application_serializer'
+require 'rubocop/cop/salsify/rails_application_serializer'
 require 'rubocop/cop/salsify/rails_application_record'
 require 'rubocop/cop/salsify/rspec_doc_string'
 require 'rubocop/cop/salsify/rspec_dot_not_self_dot'

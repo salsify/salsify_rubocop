@@ -2,7 +2,7 @@
 
 ## v0.48.0
 - Add `Salsify/RspecDotNotSelfDot` cop.
-- Add `Salsify/DandelionApplicationSerializer` cop.
+- Add `Salsify/RailsApplicationSerializer` cop.
 - Update to `rubocop` v0.48.1 and `rubocop-rspec` v1.15.0.
 - Disable cops: `Lint/AmbiguousBlockAssociation`, `Style/PercentLiteralDelimiters`,
   and `Style/SymbolArray`.
