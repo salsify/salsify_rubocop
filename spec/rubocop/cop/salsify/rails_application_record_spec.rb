@@ -2,8 +2,9 @@
 # frozen_string_literal: true
 
 describe RuboCop::Cop::Salsify::RailsApplicationRecord, :config do
-  subject(:cop) { described_class.new(config) }
   let(:msgs) { [described_class::MSG] }
+
+  subject(:cop) { described_class.new(config) }
 
   it "allows ApplicationRecord to be defined" do
     source = "class ApplicationRecord < ActiveRecord::Base\nend"

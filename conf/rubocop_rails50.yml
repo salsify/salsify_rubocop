@@ -1,6 +1,9 @@
 inherit_from:
   - ../conf/rubocop_rails.yml
 
+AllCops:
+  TargetRailsVersion: 5.0
+
 Rails/HttpPositionalArguments:
   Enabled: true
 

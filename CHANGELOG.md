@@ -1,5 +1,11 @@
 # salsify_rubocop
 
+## v0.48.0
+- Add `Salsify/RspecDotNotSelfDot` cop.
+- Update to `rubocop` v0.48.1 and `rubocop-rspec` v1.15.0.
+- Disable cops: `Lint/AmbiguousBlockAssociation`, `Style/PercentLiteralDelimiters`,
+  and `Style/SymbolArray`.
+
 ## v0.47.2
 - Fix issue for `Salsify/Style` with nested access as the target for
   conditional assignment.
