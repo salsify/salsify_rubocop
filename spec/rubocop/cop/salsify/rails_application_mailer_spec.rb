@@ -61,7 +61,7 @@ describe RuboCop::Cop::Salsify::RailsApplicationMailer, :config do
     expect(autocorrect_source(cop, source)).to eq('Nested::MyMailer = Class.new(ApplicationMailer)')
   end
 
-  it "correct anonymous mailers" do
+  it "corrects anonymous mailers" do
     source = 'Class.new(ActionMailer::Base) {}'
     inspect_source(cop, source)
     expect(cop.messages).to eq(msgs)

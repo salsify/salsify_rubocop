@@ -3,7 +3,7 @@ Salsify/RailsApplicationSerializer:
   Enabled: false
 
 Salsify/RailsApplicationMailer:
-  Description: 'Models must subclass ApplicationMailer.'
+  Description: 'Mailers must subclass ApplicationMailer.'
   Enabled: false
 
 Salsify/RailsApplicationRecord:

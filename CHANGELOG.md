@@ -1,6 +1,6 @@
 # salsify_rubocop
 
-## v0.49.0
+## v0.48.1
 - Add `Salsify/RailsApplicationMailer` cop.
 
 ## v0.48.0
