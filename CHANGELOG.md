@@ -1,5 +1,8 @@
 # salsify_rubocop
 
+## v0.48.1
+- Add `Salsify/RailsApplicationMailer` cop.
+
 ## v0.48.0
 - Add `Salsify/RspecDotNotSelfDot` cop.
 - Add `Salsify/RailsApplicationSerializer` cop.

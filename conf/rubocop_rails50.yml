@@ -7,5 +7,8 @@ AllCops:
 Rails/HttpPositionalArguments:
   Enabled: true
 
+Salsify/RailsApplicationMailer:
+  Enabled: true
+
 Salsify/RailsApplicationRecord:
   Enabled: true
