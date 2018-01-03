@@ -28,10 +28,10 @@ describe RuboCop::Cop::Salsify::RspecDocString, :config do
     described_class::DOCUMENTED_METHODS.each do |name|
       it "finds `#{name}` with a single-quoted string" do
         source = ["#{name} 'doc string' do", 'end']
-        inspect_source(cop, source)
+        inspect_source(source)
         expect(cop.messages).to eq([described_class::DOUBLE_QUOTE_MSG])
         expect(cop.highlights).to eq(["'doc string'"])
-        expect(autocorrect_source(cop, source))
+        expect(autocorrect_source(source))
           .to eq("#{name} \"doc string\" do\nend")
       end
 
@@ -54,10 +54,10 @@ describe RuboCop::Cop::Salsify::RspecDocString, :config do
     described_class::DOCUMENTED_METHODS.each do |name|
       it "finds `#{name}` with a double-quoted string" do
         source = ["#{name} \"doc string\" do", 'end']
-        inspect_source(cop, source)
+        inspect_source(source)
         expect(cop.messages).to eq([described_class::SINGLE_QUOTE_MSG])
         expect(cop.highlights).to eq(['"doc string"'])
-        expect(autocorrect_source(cop, source))
+        expect(autocorrect_source(source))
           .to eq("#{name} 'doc string' do\nend")
       end
 

@@ -29,16 +29,16 @@ describe RuboCop::Cop::Salsify::RspecStringLiterals, :config do
       context "within #{name}" do
         it "corrects a double-quoted string" do
           source = ["#{name} \"doc string\" do", '"literal"', 'end']
-          inspect_source(cop, source)
+          inspect_source(source)
           expect(cop.messages).to eq([described_class::SINGLE_QUOTE_MSG])
           expect(cop.highlights).to eq([source[1]])
-          expect(autocorrect_source(cop, source))
+          expect(autocorrect_source(source))
             .to eq("#{name} \"doc string\" do\n'literal'\nend")
         end
 
         it "accepts a single-quoted string" do
           source = ["#{name} 'doc string' do", "'literal'", 'end']
-          inspect_source(cop, source)
+          inspect_source(source)
           expect(cop.offenses).to be_empty
         end
 
@@ -54,16 +54,16 @@ describe RuboCop::Cop::Salsify::RspecStringLiterals, :config do
       context "within #{name}" do
         it "corrects a single-quoted string" do
           source = ["#{name} 'doc string' do", "'literal'", 'end']
-          inspect_source(cop, source)
+          inspect_source(source)
           expect(cop.messages).to eq([described_class::DOUBLE_QUOTE_MSG])
           expect(cop.highlights).to eq([source[1]])
-          expect(autocorrect_source(cop, source))
+          expect(autocorrect_source(source))
             .to eq("#{name} 'doc string' do\n\"literal\"\nend")
         end
 
         it "accepts a double-quoted string" do
           source = ["#{name} \"doc string\" do", '"literal"', 'end']
-          inspect_source(cop, source)
+          inspect_source(source)
           expect(cop.offenses).to be_empty
         end
 
