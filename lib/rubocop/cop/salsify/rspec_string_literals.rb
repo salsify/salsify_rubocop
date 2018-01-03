@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 module RuboCop
   module Cop
     module Salsify
@@ -22,9 +20,13 @@ module RuboCop
         DOUBLE_QUOTE_MSG = 'Prefer double-quoted strings unless you need ' \
           'single quotes to avoid extra backslashes for escaping.'.freeze
 
+        def autocorrect(node)
+          StringLiteralCorrector.correct(node, style)
+        end
+
         private
 
-        def message(*)
+        def message(_node)
           style == :single_quotes ? SINGLE_QUOTE_MSG : DOUBLE_QUOTE_MSG
         end
 

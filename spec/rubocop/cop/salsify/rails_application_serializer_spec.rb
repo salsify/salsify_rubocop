@@ -1,11 +1,11 @@
 # encoding utf-8
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Salsify::RailsApplicationSerializer, :config do
+describe RuboCop::Cop::Salsify::RailsApplicationSerializer do
   let(:msgs) { [described_class::MSG] }
   let(:highlights) { ['ActiveModel::Serializer'] }
 
-  subject(:cop) { described_class.new(config) }
+  subject(:cop) { described_class.new }
 
   it "allow ApplicationSerializer to be defined" do
     source = "class ApplicationSerializer < ActiveModel::Serializer\nend"

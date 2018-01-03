@@ -1,10 +1,10 @@
 # encoding utf-8
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Salsify::StyleDig, :config, :ruby23 do
+describe RuboCop::Cop::Salsify::StyleDig, :ruby23 do
   let(:msgs) { [described_class::MSG] }
 
-  subject(:cop) { described_class.new(config) }
+  subject(:cop) { described_class.new }
 
   it "accepts non-nested access" do
     source = 'ary[0]'
