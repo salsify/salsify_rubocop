@@ -6,18 +6,18 @@ describe RuboCop::Cop::Salsify::RspecDocString, :config do
 
   shared_examples_for "always accepted strings" do |name|
     it "accepts `#{name}` with a single character" do
-      inspect_source(cop, ["#{name} ?a do", 'end'])
+      inspect_source(["#{name} ?a do", 'end'])
       expect(cop.offenses).to be_empty
     end
 
     it "accepts `#{name}` with a %q string" do
-      inspect_source(cop, ["#{name} %q(doc string) do", 'end'])
+      inspect_source(["#{name} %q(doc string) do", 'end'])
       expect(cop.offenses).to be_empty
     end
 
     it "accepts `#{name}` with a string the requires interpolation" do
       doc_string = '"#{\'DOC\'.downcase} string"'
-      inspect_source(cop, ["#{name} #{doc_string} do", 'end'])
+      inspect_source(["#{name} #{doc_string} do", 'end'])
       expect(cop.offenses).to be_empty
     end
   end
