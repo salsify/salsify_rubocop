@@ -23,9 +23,7 @@ module RuboCop
         SUPERCLASS = 'ApplicationMailer'.freeze
         BASE_PATTERN = '(const (const nil? :ActionMailer) :Base)'.freeze
 
-        # rubocop:disable Layout/ClassStructure
         include RuboCop::Cop::EnforceSuperclass
-        # rubocop:enable Layout/ClassStructure
 
         def autocorrect(node)
           lambda do |corrector|

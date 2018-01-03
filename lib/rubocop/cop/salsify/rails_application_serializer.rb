@@ -23,9 +23,7 @@ module RuboCop
         SUPERCLASS = 'ApplicationSerializer'.freeze
         BASE_PATTERN = '(const (const nil? :ActiveModel) :Serializer)'.freeze
 
-        # rubocop:disable Layout/ClassStructure
         include RuboCop::Cop::EnforceSuperclass
-        # rubocop:enable Layout/ClassStructure
 
         def autocorrect(node)
           lambda do |corrector|
