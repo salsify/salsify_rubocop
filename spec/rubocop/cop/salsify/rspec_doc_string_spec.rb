@@ -1,4 +1,3 @@
-# encoding utf-8
 # frozen_string_literal: true
 
 describe RuboCop::Cop::Salsify::RspecDocString, :config do
@@ -16,7 +15,9 @@ describe RuboCop::Cop::Salsify::RspecDocString, :config do
     end
 
     it "accepts `#{name}` with a string the requires interpolation" do
+      # rubocop:disable Lint/InterpolationCheck
       doc_string = '"#{\'DOC\'.downcase} string"'
+      # rubocop:enable Lint/InterpolationCheck
       inspect_source(["#{name} #{doc_string} do", 'end'])
       expect(cop.offenses).to be_empty
     end
