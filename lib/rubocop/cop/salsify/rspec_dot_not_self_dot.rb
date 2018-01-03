@@ -28,7 +28,7 @@ module RuboCop
 
         def on_send(node)
           example_group_match(node) do |doc|
-            add_offense(doc, :expression, MSG) if SELF_DOT_REGEXP =~ doc.source
+            add_offense(doc, message: MSG) if SELF_DOT_REGEXP =~ doc.source
           end
         end
 

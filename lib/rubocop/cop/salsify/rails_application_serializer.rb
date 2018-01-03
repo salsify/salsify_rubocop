@@ -22,13 +22,13 @@ module RuboCop
 
         def on_class(node)
           serializer_class_definition(node) do
-            add_offense(node.children[1], :expression, MSG)
+            add_offense(node.children[1], message: MSG)
           end
         end
 
         def on_send(node)
           class_new_definition(node) do
-            add_offense(node.children.last, :expression, MSG)
+            add_offense(node.children.last, message: MSG)
           end
         end
 

@@ -49,9 +49,9 @@ module RuboCop
         def check_quotes(doc_node)
           if wrong_quotes?(doc_node)
             if style == :single_quotes
-              add_offense(doc_node, :expression, SINGLE_QUOTE_MSG)
+              add_offense(doc_node, message: SINGLE_QUOTE_MSG)
             else
-              add_offense(doc_node, :expression, DOUBLE_QUOTE_MSG)
+              add_offense(doc_node, message: DOUBLE_QUOTE_MSG)
             end
           end
         end

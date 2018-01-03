@@ -32,7 +32,7 @@ module RuboCop
             match_node = node
             # walk to outermost access node
             match_node = match_node.parent while access_node?(match_node.parent)
-            add_offense(match_node, :expression, MSG)
+            add_offense(match_node, message: MSG)
           end
         end
 
