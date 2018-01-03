@@ -22,7 +22,7 @@ Performance/RedundantMerge:
 Style/Alias:
   EnforcedStyle: prefer_alias_method
 
-Style/AlignHash:
+Layout/AlignHash:
   Enabled: false
 
 Style/Documentation:
@@ -39,19 +39,19 @@ Style/EachForSimpleLoop:
 Style/EachWithObject:
   Enabled: false
 
-Style/EmptyLines:
+Layout/EmptyLines:
   Enabled: false
 
-Style/EmptyLinesAroundBlockBody:
+Layout/EmptyLinesAroundBlockBody:
   Enabled: false
 
-Style/EmptyLinesAroundClassBody:
+Layout/EmptyLinesAroundClassBody:
   Enabled: false
 
-Style/EmptyLinesAroundModuleBody:
+Layout/EmptyLinesAroundModuleBody:
   Enabled: false
 
-Style/EmptyLinesAroundMethodBody:
+Layout/EmptyLinesAroundMethodBody:
   Enabled: false
 
 Style/EmptyLiteral:
@@ -62,7 +62,7 @@ Style/EmptyMethod:
 
 # The Exclude list is not additive. Projects that exclude file names will
 # need to re-add Appraisals.
-Style/FileName:
+Naming/FileName:
   Exclude:
     - 'Appraisals'
 
@@ -73,7 +73,7 @@ Style/GuardClause:
   Enabled: false
 
 # does not make sense to enable this without AlignHash
-Style/IndentHash:
+Layout/IndentHash:
   Enabled: false
 
 Style/Lambda:
@@ -85,13 +85,13 @@ Style/ModuleFunction:
 Style/MultilineBlockChain:
   Enabled: false
 
-Style/MultilineMethodCallIndentation:
+Layout/MultilineMethodCallIndentation:
   Enabled: false
 
-Style/MultilineOperationIndentation:
+Layout/MultilineOperationIndentation:
   Enabled: false
 
-Style/MultilineBlockLayout:
+Layout/MultilineBlockLayout:
   Enabled: false
 
 # This cop complains about values like 05.
@@ -126,7 +126,7 @@ Style/SingleLineBlockParams:
 
 # This cop doesn't work properly if you a have a block with
 # arguments split across multiple lines
-Style/SpaceAroundBlockParameters:
+Layout/SpaceAroundBlockParameters:
   Enabled: false
 
 Style/StringLiterals:
@@ -138,7 +138,7 @@ Style/StringLiterals:
 Style/SymbolArray:
   Enabled: false
 
-Style/VariableNumber:
+Naming/VariableNumber:
   Enabled: false
 
 Metrics/AbcSize:
