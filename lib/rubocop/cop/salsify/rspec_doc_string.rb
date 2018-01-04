@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 module RuboCop
   module Cop
     module Salsify
@@ -44,14 +42,18 @@ module RuboCop
           check_quotes(args.first)
         end
 
+        def autocorrect(node)
+          StringLiteralCorrector.correct(node, style)
+        end
+
         private
 
         def check_quotes(doc_node)
           if wrong_quotes?(doc_node)
             if style == :single_quotes
-              add_offense(doc_node, :expression, SINGLE_QUOTE_MSG)
+              add_offense(doc_node, message: SINGLE_QUOTE_MSG)
             else
-              add_offense(doc_node, :expression, DOUBLE_QUOTE_MSG)
+              add_offense(doc_node, message: DOUBLE_QUOTE_MSG)
             end
           end
         end
@@ -63,17 +65,6 @@ module RuboCop
             src !~ /^'/ && !needs_escaping?(node.str_content)
           else
             src !~ /^" | \\ | \#/x
-          end
-        end
-
-        def autocorrect(node)
-          lambda do |corrector|
-            str = node.str_content
-            if style == :single_quotes
-              corrector.replace(node.source_range, to_string_literal(str))
-            else
-              corrector.replace(node.source_range, str.inspect)
-            end
           end
         end
       end

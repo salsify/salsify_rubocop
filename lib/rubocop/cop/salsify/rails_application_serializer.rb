@@ -1,40 +1,33 @@
-# encoding: utf-8
-
-require 'rubocop'
-
 module RuboCop
   module Cop
     module Salsify
-      # Check that serializers subclass ApplicationSerializer
+      # Check that serializers subclass ApplicationSerializer with Rails 5.0.
+      #
+      # @example
+      #
+      #  # good
+      #  class Tesla < ApplicationSerializer
+      #    ...
+      #  end
+      #
+      #  # bad
+      #  class Yugo < ActiveModel::Serializer
+      #    ...
+      #  end
       class RailsApplicationSerializer < Cop
+        extend TargetRailsVersion
 
-        MSG = 'Serializers must subclass ApplicationSerializer'.freeze
-        APPLICATION_SERIALIZER = 'ApplicationSerializer'.freeze
-        ACTIVE_MODEL_SERIALIZER_PATTERN = '(const (const nil :ActiveModel) :Serializer)'.freeze
+        minimum_target_rails_version 5.0
 
-        def_node_matcher :serializer_class_definition, <<-PATTERN
-          (class (const _ !:ApplicationSerializer) #{ACTIVE_MODEL_SERIALIZER_PATTERN} ...)
-        PATTERN
+        MSG = 'Serializers should subclass `ApplicationSerializer`.'.freeze
+        SUPERCLASS = 'ApplicationSerializer'.freeze
+        BASE_PATTERN = '(const (const nil? :ActiveModel) :Serializer)'.freeze
 
-        def_node_matcher :class_new_definition, <<-PATTERN
-          [!^(casgn nil :ApplicationSerializer ...) (send (const nil :Class) :new #{ACTIVE_MODEL_SERIALIZER_PATTERN})]
-        PATTERN
-
-        def on_class(node)
-          serializer_class_definition(node) do
-            add_offense(node.children[1], :expression, MSG)
-          end
-        end
-
-        def on_send(node)
-          class_new_definition(node) do
-            add_offense(node.children.last, :expression, MSG)
-          end
-        end
+        include RuboCop::Cop::EnforceSuperclass
 
         def autocorrect(node)
           lambda do |corrector|
-            corrector.replace(node.source_range, APPLICATION_SERIALIZER)
+            corrector.replace(node.source_range, self.class::SUPERCLASS)
           end
         end
       end

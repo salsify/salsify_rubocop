@@ -1,5 +1,8 @@
 # salsify_rubocop
 
+## v0.52.1
+- Update to `rubocop` v0.52.1 and `rubocop-rspec` v1.21.0.
+
 ## v0.48.1
 - Add `Salsify/RailsApplicationMailer` cop.
 

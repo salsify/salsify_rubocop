@@ -1,4 +1,4 @@
-# encoding: utf-8
+# This may be added in the near future to rubocop, see https://github.com/bbatsov/rubocop/issues/5332
 
 module RuboCop
   module Cop
@@ -32,16 +32,16 @@ module RuboCop
             match_node = node
             # walk to outermost access node
             match_node = match_node.parent while access_node?(match_node.parent)
-            add_offense(match_node, :expression, MSG)
+            add_offense(match_node)
           end
         end
 
         def autocorrect(node)
           access_node = node
-          source_args = [access_node.method_args.first.source]
+          source_args = [access_node.first_argument.source]
           while access_node?(access_node.children.first)
             access_node = access_node.children.first
-            source_args << access_node.method_args.first.source
+            source_args << access_node.first_argument.source
           end
           root_node = access_node.children.first
 

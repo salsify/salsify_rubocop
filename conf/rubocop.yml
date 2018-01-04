@@ -34,3 +34,6 @@ RSpec/MultipleExpectations:
 
 RSpec/NestedGroups:
   Enabled: false
+
+RSpec/ContextWording:
+  Enabled: false
