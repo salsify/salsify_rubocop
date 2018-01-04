@@ -1,3 +1,5 @@
+# This may be added in the near future to rubocop, see https://github.com/bbatsov/rubocop/issues/5332
+
 module RuboCop
   module Cop
     module Salsify
