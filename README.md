@@ -1,7 +1,6 @@
 # salsify_rubocop
 
-This gem provides shared configuration for RuboCop for Salsify applications
-and gems.
+This gem provides shared configuration for RuboCop for Salsify applications/gems and some experimental cops.
 
 [RuboCop](https://github.com/bbatsov/rubocop) is a static code analyzer that 
 can enforce style conventions as well as identify common problems.
