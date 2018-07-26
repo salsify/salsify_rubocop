@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This may be added in the near future to rubocop, see https://github.com/bbatsov/rubocop/issues/5332
 
 module RuboCop
@@ -24,16 +26,15 @@ module RuboCop
         MSG = 'Use `dig` for nested access.'.freeze
 
         def_node_matcher :nested_access_match, <<-PATTERN
-          (send (send (send _receiver !:[]) :[] _) :[] _)
+          (send (send (send _receiver !:[]) :[] !{irange erange}) :[] !{irange erange})
         PATTERN
 
         def on_send(node)
-          if nested_access_match(node) && !conditional_assignment?(node)
-            match_node = node
-            # walk to outermost access node
-            match_node = match_node.parent while access_node?(match_node.parent)
-            add_offense(match_node)
-          end
+          return unless nested_access_match(node) && !assignment?(node)
+          match_node = node
+          # walk to outermost access node
+          match_node = match_node.parent while access_node?(match_node.parent)
+          add_offense(match_node, location: :expression, message: MSG)
         end
 
         def autocorrect(node)
@@ -55,12 +56,16 @@ module RuboCop
 
         private
 
-        def conditional_assignment?(node)
-          node.parent && node.parent.or_asgn_type? && (node.parent.children.first == node)
+        def assignment?(node)
+          node.parent&.assignment? && (node.parent.children.first == node)
         end
 
         def access_node?(node)
-          node && node.send_type? && node.method_name == :[]
+          node&.send_type? && node.method_name == :[] && !range?(node.first_argument)
+        end
+
+        def range?(node)
+          node.irange_type? || node.erange_type?
         end
       end
     end
