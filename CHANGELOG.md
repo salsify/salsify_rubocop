@@ -1,5 +1,8 @@
 # salsify_rubocop
 
+## v0.52.1.1
+- Fix `Salsify/StyleDig` false positive in assignments (see [#20](https://github.com/salsify/salsify_rubocop/issues/20)). 
+
 ## v0.52.1
 - Update to `rubocop` v0.52.1 and `rubocop-rspec` v1.21.0.
 
