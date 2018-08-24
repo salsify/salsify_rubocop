@@ -6,10 +6,10 @@ module RuboCop
       # @example
       #
       #  # good
-      #  User.unscoped
+      #  User.strip_default_scope
       #
       #  # bad
-      #  User.strip_default_scope
+      #  User.unscoped
       class RailsUnscoped < Cop
         MSG = 'Explicitly remove scopes instead of using `unscoped`.'
 
