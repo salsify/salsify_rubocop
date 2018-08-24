@@ -1,7 +1,7 @@
 module RuboCop
   module Cop
     module Salsify
-      # Check that activerecord scopes do not use `unscoped`
+      # Check that Activerecord scopes do not use `unscoped`
       #
       # @example
       #
