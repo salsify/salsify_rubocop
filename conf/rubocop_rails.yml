@@ -17,3 +17,6 @@ Rails/TimeZone:
 
 Rails/UniqBeforePluck:
   EnforcedStyle: aggressive
+
+Salsify/RailsUnscoped:
+  Enabled: true

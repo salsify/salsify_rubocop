@@ -1,5 +1,8 @@
 # salsify_rubocop
 
+## v0.58.0.1
+- Add `Salsify/RailsUnscoped` cop.
+
 ## v0.58.0
 - Update `rubocop` to v0.58.0.
 - Update `rubocop-rspec` to v1.29.0.
