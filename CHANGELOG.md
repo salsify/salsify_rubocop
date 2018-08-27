@@ -1,5 +1,10 @@
 # salsify_rubocop
 
+## v0.58.0
+- Update `rubocop` to v0.58.0.
+- Update `rubocop-rspec` to v1.29.0.
+- Adjust Ruby version configuration in `Salsify/StyleDig` spec.
+
 ## v0.52.1.1
 - Fix `Salsify/StyleDig` false positive in assignments (see [#20](https://github.com/salsify/salsify_rubocop/issues/20)). 
 
