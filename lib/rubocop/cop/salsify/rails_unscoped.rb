@@ -13,12 +13,13 @@ module RuboCop
       class RailsUnscoped < Cop
         MSG = 'Explicitly remove scopes instead of using `unscoped`.'.freeze
 
-        def_node_matcher :unscoped?, <<-END
+        def_node_matcher :unscoped?, <<-PATTERN
           (send _ :unscoped)
-        END
+        PATTERN
 
         def on_send(node)
           return unless unscoped?(node)
+
           add_offense(node, location: :expression, message: MSG)
         end
       end

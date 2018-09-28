@@ -29,6 +29,7 @@ module RuboCop
 
         def on_send(node)
           return unless nested_access_match(node) && !assignment?(node)
+
           match_node = node
           # walk to outermost access node
           match_node = match_node.parent while access_node?(match_node.parent)
