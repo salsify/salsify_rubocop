@@ -38,9 +38,9 @@ describe RuboCop::Cop::Salsify::RspecDocString, :config do
 
       it "accepts `#{name}` with a double-quoted string" do
         inspect_source([
-                         "#{name} \"doc string\" do",
-                         'end'
-                       ].join("\n"))
+          "#{name} \"doc string\" do",
+          'end'
+        ].join("\n"))
         expect(cop.offenses).to be_empty
       end
 
@@ -63,9 +63,9 @@ describe RuboCop::Cop::Salsify::RspecDocString, :config do
 
       it "accepts `#{name}` with a single-quoted string" do
         inspect_source([
-                         "#{name} 'doc string' do",
-                         'end'
-                       ].join("\n"))
+          "#{name} 'doc string' do",
+          'end'
+        ].join("\n"))
         expect(cop.offenses).to be_empty
       end
 
