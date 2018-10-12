@@ -10,6 +10,10 @@ Salsify/RailsApplicationRecord:
   Description: 'Models must subclass ApplicationRecord.'
   Enabled: false
 
+Salsify/RailsUnscoped:
+  Description: 'Activerecord scopes cannot use unscoped.'
+  Enabled: false
+
 Salsify/RspecDocString:
   Description: 'Check that RSpec doc strings use the correct quoting.'
   Enabled: true
