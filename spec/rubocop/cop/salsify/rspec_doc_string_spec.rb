@@ -5,12 +5,12 @@ describe RuboCop::Cop::Salsify::RspecDocString, :config do
 
   shared_examples_for "always accepted strings" do |name|
     it "accepts `#{name}` with a single character" do
-      inspect_source(["#{name} ?a do", 'end'].join("\n"))
+      inspect_source(["#{name} ?a do", 'end'].join($RS))
       expect(cop.offenses).to be_empty
     end
 
     it "accepts `#{name}` with a %q string" do
-      inspect_source(["#{name} %q(doc string) do", 'end'].join("\n"))
+      inspect_source(["#{name} %q(doc string) do", 'end'].join($RS))
       expect(cop.offenses).to be_empty
     end
 
@@ -18,7 +18,7 @@ describe RuboCop::Cop::Salsify::RspecDocString, :config do
       # rubocop:disable Lint/InterpolationCheck
       doc_string = '"#{\'DOC\'.downcase} string"'
       # rubocop:enable Lint/InterpolationCheck
-      inspect_source(["#{name} #{doc_string} do", 'end'].join("\n"))
+      inspect_source(["#{name} #{doc_string} do", 'end'].join($RS))
       expect(cop.offenses).to be_empty
     end
   end
@@ -29,10 +29,10 @@ describe RuboCop::Cop::Salsify::RspecDocString, :config do
     described_class::DOCUMENTED_METHODS.each do |name|
       it "finds `#{name}` with a single-quoted string" do
         source = ["#{name} 'doc string' do", 'end']
-        inspect_source(source.join("\n"))
+        inspect_source(source.join($RS))
         expect(cop.messages).to eq([described_class::DOUBLE_QUOTE_MSG])
         expect(cop.highlights).to eq(["'doc string'"])
-        expect(autocorrect_source(source.join("\n")))
+        expect(autocorrect_source(source.join($RS)))
           .to eq("#{name} \"doc string\" do\nend")
       end
 
@@ -40,7 +40,7 @@ describe RuboCop::Cop::Salsify::RspecDocString, :config do
         inspect_source([
           "#{name} \"doc string\" do",
           'end'
-        ].join("\n"))
+        ].join($RS))
         expect(cop.offenses).to be_empty
       end
 
@@ -54,10 +54,10 @@ describe RuboCop::Cop::Salsify::RspecDocString, :config do
     described_class::DOCUMENTED_METHODS.each do |name|
       it "finds `#{name}` with a double-quoted string" do
         source = ["#{name} \"doc string\" do", 'end']
-        inspect_source(source.join("\n"))
+        inspect_source(source.join($RS))
         expect(cop.messages).to eq([described_class::SINGLE_QUOTE_MSG])
         expect(cop.highlights).to eq(['"doc string"'])
-        expect(autocorrect_source(source.join("\n")))
+        expect(autocorrect_source(source.join($RS)))
           .to eq("#{name} 'doc string' do\nend")
       end
 
@@ -65,7 +65,7 @@ describe RuboCop::Cop::Salsify::RspecDocString, :config do
         inspect_source([
           "#{name} 'doc string' do",
           'end'
-        ].join("\n"))
+        ].join($RS))
         expect(cop.offenses).to be_empty
       end
 
