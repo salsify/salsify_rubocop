@@ -1,3 +1,3 @@
 module SalsifyRubocop
-  VERSION = '0.59.2.1.rc1'.freeze
+  VERSION = '0.60.0'.freeze
 end
