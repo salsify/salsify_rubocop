@@ -1,7 +1,7 @@
 # salsify_rubocop
 
 ## v0.62.0
-- Upgrade to `rubocop` v0.60.0
+- Upgrade to `rubocop` v0.62.0
 - Upgrade to `rubocop_rspec` v1.31.0
 
 ## v0.60.0.1
