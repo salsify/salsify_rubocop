@@ -183,3 +183,6 @@ Style/NumericLiterals:
 
 Style/StructInheritance:
   Enabled: false
+
+Style/WordArray:
+  EnforcedStyle: brackets
