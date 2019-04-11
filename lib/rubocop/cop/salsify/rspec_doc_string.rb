@@ -26,7 +26,7 @@ module RuboCop
           'Example Group/Example doc strings must be double-quoted.'.freeze
 
         SHARED_EXAMPLES = RuboCop::RSpec::Language::SelectorSet.new(
-          %i(include_examples it_behaves_like it_should_behave_like include_context)
+          [:include_examples, :it_behaves_like, :it_should_behave_like, :include_context]
         ).freeze
 
         DOCUMENTED_METHODS = (RuboCop::RSpec::Language::ExampleGroups::ALL +
