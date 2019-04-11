@@ -185,4 +185,7 @@ Style/StructInheritance:
   Enabled: false
 
 Style/WordArray:
+  EnforcedStyle: brackets 
+
+Style/SymbolArray:
   EnforcedStyle: brackets
