@@ -1,5 +1,10 @@
 # salsify_rubocop
 
+## v0.78.0
+- Upgrade to `rubocop` v0.78.0
+- Upgrade to `rubocop_rspec` v1.37.0
+- Upgrade to `bundler` v2.1.2
+
 ## v0.62.0
 - Upgrade to `rubocop` v0.62.0
 - Upgrade to `rubocop_rspec` v1.31.0
