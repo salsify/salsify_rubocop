@@ -1,5 +1,6 @@
 require 'salsify_rubocop/version'
 require 'rubocop-rspec'
+require 'rubocop-rails'
 
 # Because RuboCop doesn't yet support plugins, we have to monkey patch in a
 # bit of our configuration. Based on approach from rubocop-rspec:
