@@ -3,6 +3,9 @@
 ## v0.78.0
 - Upgrade to `rubocop` v0.78.0
 - Upgrade to `rubocop_rspec` v1.37.0
+- Add `rubocop-rails `v2.4.0`
+- Add `rubocop-performance `v1.5.0`
+- Update names/namespaces of rules that changed between 0.62 and 0.78
 
 ## v0.62.0
 - Upgrade to `rubocop` v0.62.0
