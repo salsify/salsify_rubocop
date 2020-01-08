@@ -134,10 +134,6 @@ Style/StringLiterals:
   Exclude:
     - 'spec/**/*'
 
-# We don't require %i() for an array of symbols.
-Style/SymbolArray:
-  Enabled: false
-
 Naming/VariableNumber:
   Enabled: false
 

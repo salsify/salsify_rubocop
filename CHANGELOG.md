@@ -1,5 +1,8 @@
 # salsify_rubocop
 
+## v0.78.1
+- Fix "`Style/SymbolArray` is concealed by line 190" warning
+
 ## v0.78.0
 - Upgrade to `rubocop` v0.78.0
 - Upgrade to `rubocop_rspec` v1.37.0
