@@ -67,7 +67,7 @@ Naming/FileName:
     - 'Appraisals'
 
 Style/FrozenStringLiteralComment:
-  Enabled: false
+  Enabled: true
 
 Style/GuardClause:
   Enabled: false
@@ -152,10 +152,12 @@ Metrics/ClassLength:
 Metrics/CyclomaticComplexity:
   Enabled: false
 
-# Disabling line length enforcement since annotate generates
-# some pretty long lines
 Layout/LineLength:
-  Enabled: false
+  Enabled: true
+  Max: 120
+  IgnoreCopDirectives: true
+  IgnoredPatterns:
+    - ^#
 
 Metrics/MethodLength:
   Enabled: false

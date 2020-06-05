@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RuboCop
   module Cop
     module Salsify
@@ -19,9 +21,9 @@ module RuboCop
 
         minimum_target_rails_version 5.0
 
-        MSG = 'Serializers should subclass `ApplicationSerializer`.'.freeze
-        SUPERCLASS = 'ApplicationSerializer'.freeze
-        BASE_PATTERN = '(const (const nil? :ActiveModel) :Serializer)'.freeze
+        MSG = 'Serializers should subclass `ApplicationSerializer`.'
+        SUPERCLASS = 'ApplicationSerializer'
+        BASE_PATTERN = '(const (const nil? :ActiveModel) :Serializer)'
 
         include RuboCop::Cop::EnforceSuperclass
 

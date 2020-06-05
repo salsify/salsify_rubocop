@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'salsify_rubocop/version'
 require 'rubocop-performance'
 require 'rubocop-rails'
