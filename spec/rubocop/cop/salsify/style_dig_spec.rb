@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 describe RuboCop::Cop::Salsify::StyleDig, :config do
-  let(:ruby_version) { 2.3 }
+  let(:ruby_version) { 2.4 }
   let(:msgs) { [described_class::MSG] }
 
   subject(:cop) { described_class.new(config) }
