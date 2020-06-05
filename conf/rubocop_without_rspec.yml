@@ -9,6 +9,15 @@ AllCops:
     - 'tmp/**/*'
     - 'vendor/**/*'
 
+Bundler/GemComment:
+  Enabled: true
+  OnlyFor:
+    - 'version_specifiers'
+    - 'source'
+    - 'git'
+    - 'github'
+    - 'gist'
+
 # This cop has poor handling for the common case of a lambda arg in a DSL
 Lint/AmbiguousBlockAssociation:
   Enabled: false
