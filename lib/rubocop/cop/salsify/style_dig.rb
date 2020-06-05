@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This may be added in the near future to rubocop, see https://github.com/bbatsov/rubocop/issues/5332
 
 module RuboCop
@@ -21,7 +23,7 @@ module RuboCop
 
         minimum_target_ruby_version 2.3
 
-        MSG = 'Use `dig` for nested access.'.freeze
+        MSG = 'Use `dig` for nested access.'
 
         def_node_matcher :nested_access_match, <<-PATTERN
           (send (send (send _receiver !:[]) :[] !{irange erange}) :[] !{irange erange})

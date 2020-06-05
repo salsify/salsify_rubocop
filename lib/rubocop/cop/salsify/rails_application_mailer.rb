@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RuboCop
   module Cop
     module Salsify
@@ -19,9 +21,9 @@ module RuboCop
 
         minimum_target_rails_version 5.0
 
-        MSG = 'Mailers should subclass `ApplicationMailer`.'.freeze
-        SUPERCLASS = 'ApplicationMailer'.freeze
-        BASE_PATTERN = '(const (const nil? :ActionMailer) :Base)'.freeze
+        MSG = 'Mailers should subclass `ApplicationMailer`.'
+        SUPERCLASS = 'ApplicationMailer'
+        BASE_PATTERN = '(const (const nil? :ActionMailer) :Base)'
 
         include RuboCop::Cop::EnforceSuperclass
 

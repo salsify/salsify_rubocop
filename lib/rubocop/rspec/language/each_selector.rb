@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Monkey-patch SelectorSet to allow enumeration of selectors.
 
 module RuboCop

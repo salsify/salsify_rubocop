@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RuboCop
   module Cop
     module Salsify
@@ -18,7 +20,7 @@ module RuboCop
       class RspecDotNotSelfDot < Cop
 
         SELF_DOT_REGEXP = /["']self\./.freeze
-        MSG = 'Use ".<class method>" instead of "self.<class method>" for example group description.'.freeze
+        MSG = 'Use ".<class method>" instead of "self.<class method>" for example group description.'
 
         def_node_matcher :example_group_match, <<-PATTERN
           (send _ #{RuboCop::RSpec::Language::ExampleGroups::ALL.node_pattern_union} $_ ...)

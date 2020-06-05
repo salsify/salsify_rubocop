@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RuboCop
   module Cop
     module Salsify
@@ -11,7 +13,7 @@ module RuboCop
       #  # bad
       #  User.unscoped
       class RailsUnscoped < Cop
-        MSG = 'Explicitly remove scopes instead of using `unscoped`.'.freeze
+        MSG = 'Explicitly remove scopes instead of using `unscoped`.'
 
         def_node_matcher :unscoped?, <<-PATTERN
           (send _ :unscoped)
