@@ -1,7 +1,11 @@
 # salsify_rubocop
 
+## 0.91.0
+
+- Upgrade to `rubocop` v0.91.0
+
 ## 0.85.0
-- Upgrate to `rubocop` v0.85.0
+- Upgrade to `rubocop` v0.85.0
 - Enable enforcement of Gem comments when specifying versions or sources 
 - Drop support for Ruby 2.3, as rubocop v0.81+ doesn't support it anymore
 - Add `FrozenStringLiteralComment` and `LineLength` (max 120) rules.
