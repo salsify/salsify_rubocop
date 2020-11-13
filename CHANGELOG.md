@@ -1,5 +1,10 @@
 # salsify_rubocop
 
+## 0.93.1
+
+- Upgrade to `rubocop` v0.93.1
+- Add configuration for pending 1.0 cops
+
 ## 0.91.0
 
 - Upgrade to `rubocop` v0.91.0

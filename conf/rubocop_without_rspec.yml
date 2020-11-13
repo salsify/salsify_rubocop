@@ -1,4 +1,5 @@
 AllCops:
+  NewCops: disable
   DisplayCopNames: true
   Exclude:
     - 'bin/**/*'
@@ -196,3 +197,159 @@ Style/WordArray:
 
 Style/SymbolArray:
   EnforcedStyle: brackets
+
+
+# -- Pending Cops for rubocop@1.0 --
+
+Layout/BeginEndAlignment:
+  Enabled: true
+
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
+Lint/BinaryOperatorWithIdenticalOperands:
+  Enabled: true
+
+Lint/ConstantDefinitionInBlock:
+  Enabled: true
+
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
+
+Lint/DuplicateElsifCondition:
+  Enabled: true
+
+Lint/DuplicateRequire:
+  Enabled: true
+
+Lint/DuplicateRescueException:
+  Enabled: true
+
+Lint/EmptyConditionalBody:
+  Enabled: true
+
+Lint/EmptyFile:
+  Enabled: true
+
+Lint/FloatComparison:
+  Enabled: true
+
+Lint/HashCompareByIdentity:
+  Enabled: false
+
+Lint/IdentityComparison:
+  Enabled: false
+
+Lint/MissingSuper:
+  Enabled: true
+
+Lint/MixedRegexpCaptureTypes:
+  Enabled: false
+
+Lint/OutOfRangeRegexpRef:
+  Enabled: true
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/RedundantSafeNavigation:
+  Enabled: true
+
+Lint/SelfAssignment:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Lint/TopLevelReturnWithArgument:
+  Enabled: false
+
+Lint/TrailingCommaInAttributeDeclaration:
+  Enabled: true
+
+Lint/UnreachableLoop:
+  Enabled: true
+
+Lint/UselessMethodDefinition:
+  Enabled: true
+
+Lint/UselessTimes:
+  Enabled: true
+
+Style/AccessorGrouping:
+  Enabled: true
+
+Style/BisectedAttrAccessor:
+  Enabled: true
+
+Style/CaseLikeIf:
+  Enabled: true
+
+Style/ClassEqualityComparison:
+  Enabled: true
+
+Style/CombinableLoops:
+  Enabled: false
+
+Style/ExplicitBlockArgument:
+  Enabled: true
+
+Style/ExponentialNotation:
+  Enabled: true
+
+Style/GlobalStdStream:
+  Enabled: true
+
+Style/HashAsLastArrayItem:
+  Enabled: false
+
+Style/HashEachMethods:
+  Enabled: false
+
+Style/HashLikeCase:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+Style/KeywordParametersOrder:
+  Enabled: true
+
+Style/OptionalBooleanParameter:
+  Enabled: false
+
+Style/RedundantAssignment:
+  Enabled: true
+
+Style/RedundantFetchBlock:
+  Enabled: true
+
+Style/RedundantFileExtensionInRequire:
+  Enabled: true
+
+Style/RedundantRegexpCharacterClass:
+  Enabled: true
+
+Style/RedundantRegexpEscape:
+  Enabled: true
+
+Style/RedundantSelfAssignment:
+  Enabled: false
+
+Style/SingleArgumentDig:
+  Enabled: false
+
+Style/SlicingWithRange:
+  Enabled: true
+
+Style/SoleNestedConditional:
+  Enabled: true
+
+Style/StringConcatenation:
+  Enabled: true
