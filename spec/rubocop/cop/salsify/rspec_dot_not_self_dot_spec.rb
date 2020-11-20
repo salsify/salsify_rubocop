@@ -1,39 +1,66 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Salsify::RspecDotNotSelfDot do
-  subject(:cop) { described_class.new }
-
+describe RuboCop::Cop::Salsify::RspecDotNotSelfDot, :config do
   let(:msgs) { [described_class::MSG] }
 
-  RuboCop::RSpec::Language::ExampleGroups::ALL.each do |name|
-    it "corrects #{name} with `self.class_method`" do
-      source = "#{name} \"self.class_method\" do\nend"
-      inspect_source(source)
-      expect(cop.highlights).to eq(['"self.class_method"'])
-      expect(cop.messages).to eq(msgs)
-      expect(autocorrect_source(source)).to eq(source.sub('self.', '.'))
-    end
+  let(:example_group_methods) do
+    RuboCop::RSpec::Language.config['ExampleGroups'].values.flatten
+  end
 
-    it "corrects #{name} with `self.class_method` and metadata" do
-      source = "#{name} \"self.class_method\", foo: true do\nend"
-      inspect_source(source)
-      expect(cop.highlights).to eq(['"self.class_method"'])
-      expect(cop.messages).to eq(msgs)
-      expect(autocorrect_source(source)).to eq(source.sub('self.', '.'))
-    end
+  let(:example_methods) do
+    RuboCop::RSpec::Language.config['Examples'].values.flatten
+  end
 
-    it "accepts #{name} with `.class_method`" do
-      source = "#{name} \".class_method\" do\nend"
-      inspect_source(source)
-      expect(cop.offenses).to be_empty
+  before do
+    # ensure configuration loaded
+    cop.on_new_investigation
+  end
+
+  it "corrects example groups with `self.class_method`" do
+    example_group_methods.each do |name|
+      expect_offense(<<~RUBY)
+        #{name} "self.class_method" do
+        #{' ' * name.length} ^^^^^^^^^^^^^^^^^^^ Use ".<class method>" instead of "self.<class method>" for example group description.
+        end
+      RUBY
+
+      expect_correction(<<~RUBY)
+        #{name} ".class_method" do
+        end
+      RUBY
     end
   end
 
-  RuboCop::RSpec::Language::Examples::ALL.each do |name|
-    it "accepts #{name} with `self.class_method`" do
-      source = "#{name} \"self.class_method\" do\nend"
-      inspect_source(source)
-      expect(cop.offenses).to be_empty
+  it "corrects example groups with `self.class_method` and metadata" do
+    example_group_methods.each do |name|
+      expect_offense(<<~RUBY)
+        #{name} "self.class_method", foo: true do
+        #{' ' * name.length} ^^^^^^^^^^^^^^^^^^^ Use ".<class method>" instead of "self.<class method>" for example group description.
+        end
+      RUBY
+
+      expect_correction(<<~RUBY)
+        #{name} ".class_method", foo: true do
+        end
+      RUBY
+    end
+  end
+
+  it "accepts example groups with `self.class_method` and metadata" do
+    example_group_methods.each do |name|
+      expect_no_offenses(<<~RUBY)
+        #{name} ".class_method", foo: true do
+        end
+      RUBY
+    end
+  end
+
+  it "accepts examples with `self.class_method`" do
+    example_methods.each do |name|
+      expect_no_offenses(<<~RUBY)
+        #{name} ".class_method", foo: true do
+        end
+      RUBY
     end
   end
 end
