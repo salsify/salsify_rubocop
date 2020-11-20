@@ -19,7 +19,8 @@ module RuboCop
       #   it 'does something' do
       #     ...
       #   end
-      class RspecDocString < Cop
+      class RspecDocString < RuboCop::Cop::RSpec::Base
+        extend RuboCop::Cop::AutoCorrector
         include ConfigurableEnforcedStyle
 
         SINGLE_QUOTE_MSG =
@@ -27,37 +28,38 @@ module RuboCop
         DOUBLE_QUOTE_MSG =
           'Example Group/Example doc strings must be double-quoted.'
 
-        SHARED_EXAMPLES = RuboCop::RSpec::Language::SelectorSet.new(
-          [:include_examples, :it_behaves_like, :it_should_behave_like, :include_context]
-        ).freeze
 
-        DOCUMENTED_METHODS = (RuboCop::RSpec::Language::ExampleGroups::ALL +
-          RuboCop::RSpec::Language::Examples::ALL +
-          RuboCop::RSpec::Language::SharedGroups::ALL +
-          SHARED_EXAMPLES).freeze
+        DOCUMENTED_METHODS = RuboCop::ConfigLoader.default_configuration.for_department('RSpec')
+                               .fetch('Language')
+                               .values_at('ExampleGroups', 'Examples', 'SharedGroups', 'Includes')
+                               .flat_map { |element| element.values.flatten }
+                               .map(&:to_sym)
+
+        def_node_matcher :documented_method?,
+                         send_pattern(<<~PATTERN)
+                           {
+                             #ExampleGroups.all
+                             #Examples.all
+                             #SharedGroups.all
+                             #Includes.all
+                           }
+                         PATTERN
 
         def on_send(node)
-          _receiver, method_name, *args = *node
-          return unless DOCUMENTED_METHODS.include?(method_name) &&
-            !args.empty? && args.first.str_type?
+          _receiver, _method_name, *args = *node
+          return unless documented_method?(node) && args.first&.str_type?
 
           check_quotes(args.first)
-        end
-
-        def autocorrect(node)
-          StringLiteralCorrector.correct(node, style)
         end
 
         private
 
         def check_quotes(doc_node)
-          if wrong_quotes?(doc_node)
-            if style == :single_quotes
-              add_offense(doc_node, message: SINGLE_QUOTE_MSG)
-            else
-              add_offense(doc_node, message: DOUBLE_QUOTE_MSG)
-            end
-          end
+          return unless wrong_quotes?(doc_node)
+
+          add_offense(doc_node,
+                      message: style == :single_quotes ? SINGLE_QUOTE_MSG : DOUBLE_QUOTE_MSG,
+                      &StringLiteralCorrector.correct(doc_node, style))
         end
 
         def wrong_quotes?(node)
