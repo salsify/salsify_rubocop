@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 module SalsifyRubocop
-  VERSION = '0.93.1'
+  VERSION = '1.0.0'
 end
