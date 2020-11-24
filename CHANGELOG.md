@@ -1,17 +1,17 @@
 # salsify_rubocop
 
-## 1.0.0
+## 1.0.1
+- Configure file exclusions for `Rails/RakeEnvironment` and `Gemspec/RequiredRubyVersion`
 
+## 1.0.0
 - Upgrade to `rubocop` v1.0.0
 - Upgrade to `rubocop-rspec` v2.0.0
 
 ## 0.93.1
-
 - Upgrade to `rubocop` v0.93.1
 - Add configuration for pending 1.0 cops
 
 ## 0.91.0
-
 - Upgrade to `rubocop` v0.91.0
 
 ## 0.85.0
