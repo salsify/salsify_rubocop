@@ -15,6 +15,10 @@ Rails/TimeZone:
   Exclude:
     - 'spec/**/*'
 
+Rails/RakeEnvironment:
+  Exclude:
+    - lib/tasks/auto_annotate_models.rake
+
 Rails/UniqBeforePluck:
   EnforcedStyle: aggressive
 
