@@ -19,6 +19,10 @@ Bundler/GemComment:
     - 'github'
     - 'gist'
 
+Gemspec/RequiredRubyVersion:
+  Exclude:
+    - schemas_gem/*_schemas.gemspec
+
 # This cop has poor handling for the common case of a lambda arg in a DSL
 Lint/AmbiguousBlockAssociation:
   Enabled: false
