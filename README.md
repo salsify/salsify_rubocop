@@ -93,6 +93,23 @@ This gem also includes a dependency on `rubocop-rspec` that will be updated to
 the latest compatible version each time that the MAJOR.MINOR version of `rubocop` 
 is updated.
 
+## Change Process
+
+This configuration is meant to represent the general opinion of Salsify's Ruby community around best practices for
+writing readable Ruby code. As a result, changes to this configuration should go through a discussion phase in the
+#rubocop-changes Slack channel to ensure the broader Salsify Ruby community is on board with the change.
+
+### Updating RuboCop
+
+Updating to a new minor version of `rubocop` may add new "pending" cops which are not enabled until the next major
+version (see: [RuboCop Versioning](https://docs.rubocop.org/rubocop/versioning.html)). However, we may wish to eagerly
+enable or explicitly disable newly introduced cops. Any such decisions around "pending" cops should go through the
+change process described above.
+
+When updating to a new major version or updating other dependencies that don't follow the same versioning pattern, we
+should check if there are any newly enabled cops included in the update. Any new cops should go through a review process
+in #rubocop-changes to ensure we truly want to enable the cop.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment. Run `bundle exec salsify_rubocop` to use the gem in this directory, ignoring other installed copies of this gem.
