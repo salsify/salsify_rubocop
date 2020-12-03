@@ -100,6 +100,12 @@ writing readable Ruby code. As a result, changes to this configuration should go
 #rubocop-changes Slack channel to ensure the broader Salsify Ruby community is on board with the change. Non-Salsify
 developers should file an issue via GitHub with proposed changes.
 
+When enabling a cop we try to keep the following points in mind to avoid overburdening consumers:
+
+* Does the cop support safe auto-correction? If not, do we expect a large number of offenses needing manual remediation?
+* Does the cop help avoid bugs or is it merely stylistic?
+* For stylistic cops, does the enforced style reflect that of Salsify developers?
+
 ### Updating RuboCop
 
 Updating to a new minor version of `rubocop` may add new "pending" cops which are not enabled until the next major
