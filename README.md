@@ -97,7 +97,8 @@ is updated.
 
 This configuration is meant to represent the general opinion of Salsify's Ruby community around best practices for
 writing readable Ruby code. As a result, changes to this configuration should go through a discussion phase in the
-#rubocop-changes Slack channel to ensure the broader Salsify Ruby community is on board with the change.
+#rubocop-changes Slack channel to ensure the broader Salsify Ruby community is on board with the change. Non-Salsify
+developers should file an issue via GitHub with proposed changes.
 
 ### Updating RuboCop
 
