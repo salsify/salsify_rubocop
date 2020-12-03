@@ -1,0 +1,34 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: salsify/ruby_ci:2.5.8
+    environment:
+      CIRCLE_TEST_REPORTS: "test-results"
+    working_directory: ~/salsify_rubocop
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-gems-ruby-2.5.8-{{ checksum "salsify_rubocop.gemspec" }}-{{ checksum "Gemfile" }}
+            - v1-gems-ruby-2.5.8-
+      - run:
+          name: Install Gems
+          command: |
+            if ! bundle check --path=vendor/bundle; then
+              bundle install --path=vendor/bundle --jobs=4 --retry=3
+              bundle clean
+            fi
+      - save_cache:
+          key: v1-gems-ruby-2.5.8-{{ checksum "salsify_rubocop.gemspec" }}-{{ checksum "Gemfile" }}
+          paths:
+            - "vendor/bundle"
+      - run:
+          name: Run Rubocop
+          command: bundle exec rubocop
+      - run:
+          name: Run Tests
+          command: |
+            bundle exec rspec --format RspecJunitFormatter --out $CIRCLE_TEST_REPORTS/rspec/junit.xml --format progress spec
+      - store_test_results:
+          path: "test-results"
