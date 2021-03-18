@@ -1,5 +1,9 @@
 # salsify_rubocop
 
+## 1.0.2
+- Disable version specifier checks for the `Bundler/GemComment` cop until https://github.com/rubocop/rubocop/pull/9358
+  is merged.
+
 ## 1.0.1
 - Configure file exclusions for `Rails/RakeEnvironment` and `Gemspec/RequiredRubyVersion`
 
