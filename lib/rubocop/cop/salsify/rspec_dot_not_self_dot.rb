@@ -34,7 +34,7 @@ module RuboCop
             add_offense(doc) do |corrector|
               corrector.remove(Parser::Source::Range.new(doc.source_range.source_buffer,
                                                          doc.source_range.begin_pos + 1,
-                                                         doc.source_range.begin_pos + 5))
+                                                         doc.source_range.begin_pos + 5,))
             end
           end
         end

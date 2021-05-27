@@ -50,7 +50,7 @@ module RuboCop
           lambda do |corrector|
             range = Parser::Source::Range.new(node.source_range.source_buffer,
                                               root_node.source_range.end_pos,
-                                              node.source_range.end_pos)
+                                              node.source_range.end_pos,)
             corrector.replace(range, ".dig(#{source_args.reverse.join(', ')})")
           end
         end

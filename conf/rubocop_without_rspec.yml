@@ -232,6 +232,9 @@ Style/RedundantSelfAssignment:
 Style/SingleArgumentDig:
   Enabled: false
 
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: consistent_comma
+
 Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: consistent_comma
 
