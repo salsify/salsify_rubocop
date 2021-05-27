@@ -10,8 +10,8 @@ RSpec.shared_context "with default RSpec/Language config", :config do
     {
       'RSpec' => {
         'Include' => default_configuration['Include'],
-        'Language' => deep_dup(default_configuration['Language'])
-      }
+        'Language' => deep_dup(default_configuration['Language']),
+      },
     }
   end
 

@@ -1,5 +1,8 @@
 # salsify_rubocop
 
+## 1.0.3
+- Configure `Style/TrailingCommaInArguments`, `Style/TrailingCommaInArrayLiteral`, and `Style/TrailingCommaInHashLiteral` to require commas in multiline situations
+
 ## 1.0.2
 - Disable version specifier checks for the `Bundler/GemComment` cop until https://github.com/rubocop/rubocop/pull/9358
   is merged.
