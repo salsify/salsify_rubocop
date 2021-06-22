@@ -13,7 +13,7 @@ AllCops:
 Bundler/GemComment:
   Enabled: true
   OnlyFor:
-    - 'limiting_version_specifiers'
+    - 'restrictive_version_specificiers'
     - 'source'
     - 'git'
     - 'github'
