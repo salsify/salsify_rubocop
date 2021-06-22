@@ -10,10 +10,10 @@ AllCops:
     - 'tmp/**/*'
     - 'vendor/**/*'
 
-# Don't check version_specifiers until https://github.com/rubocop/rubocop/pull/9358 merges
 Bundler/GemComment:
   Enabled: true
   OnlyFor:
+    - 'limiting_version_specifiers'
     - 'source'
     - 'git'
     - 'github'
