@@ -2,6 +2,7 @@
 
 ## 1.1.0
 - Re-enable version specifier checks for the `Bundler/GemComment` cop, for limiting version specifiers only.
+- Upgrade to `rubocop` v1.13.0
 
 ## 1.0.2
 - Disable version specifier checks for the `Bundler/GemComment` cop until https://github.com/rubocop/rubocop/pull/9358
