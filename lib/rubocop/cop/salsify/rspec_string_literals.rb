@@ -11,7 +11,8 @@ module RuboCop
       # Used together with Salsify/RspecDocString it allows one quote style to
       # be used for doc strings (`describe "foobar"`) and another style to be
       # used for all other strings in specs.
-      class RspecStringLiterals < Cop
+      class RspecStringLiterals < RuboCop::Cop::RSpec::Base
+        extend RuboCop::Cop::AutoCorrector
         include ConfigurableEnforcedStyle
         include StringLiteralsHelp
 
@@ -22,8 +23,8 @@ module RuboCop
         DOUBLE_QUOTE_MSG = 'Prefer double-quoted strings unless you need ' \
           'single quotes to avoid extra backslashes for escaping.'
 
-        def autocorrect(node)
-          StringLiteralCorrector.correct(node, style)
+        def autocorrect(corrector, node)
+          StringLiteralCorrector.correct(corrector, node, style)
         end
 
         private
