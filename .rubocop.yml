@@ -2,7 +2,7 @@ inherit_from:
   - conf/rubocop.yml
 
 AllCops:
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 2.6
 
 Layout/LineLength:
   Exclude:
