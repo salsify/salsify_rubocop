@@ -30,14 +30,14 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.required_ruby_version = '>= 2.4'
+  spec.required_ruby_version = '>= 2.6'
 
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'rake', '~> 13.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rspec_junit_formatter'
 
-  spec.add_runtime_dependency 'rubocop', '~> 1.0.0'
+  spec.add_runtime_dependency 'rubocop', '~> 1.13.0'
   spec.add_runtime_dependency 'rubocop-performance', '~> 1.5.0'
   spec.add_runtime_dependency 'rubocop-rails', '~> 2.4.0'
   spec.add_runtime_dependency 'rubocop-rspec', '~> 2.0.0'

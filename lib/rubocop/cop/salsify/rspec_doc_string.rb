@@ -57,9 +57,9 @@ module RuboCop
         def check_quotes(doc_node)
           return unless wrong_quotes?(doc_node)
 
-          add_offense(doc_node,
-                      message: style == :single_quotes ? SINGLE_QUOTE_MSG : DOUBLE_QUOTE_MSG,
-                      &StringLiteralCorrector.correct(doc_node, style))
+          add_offense(doc_node, message: style == :single_quotes ? SINGLE_QUOTE_MSG : DOUBLE_QUOTE_MSG) do |corrector|
+            StringLiteralCorrector.correct(corrector, doc_node, style)
+          end
         end
 
         def wrong_quotes?(node)
