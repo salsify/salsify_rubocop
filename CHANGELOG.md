@@ -1,5 +1,8 @@
 # salsify_rubocop
 
+## 1.2.0
+- Disable Style/ExplicitBlockArgument for performance reasons, https://github.com/JuanitoFatas/fast-ruby/blob/master/code/proc-and-block/proc-call-vs-yield.rb.
+
 ## 1.1.0
 - Re-enable version specifier checks for the `Bundler/GemComment` cop, for limiting version specifiers only.
 - Upgrade to `rubocop` v1.13.0
