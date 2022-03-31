@@ -78,6 +78,11 @@ Style/EmptyLiteral:
 Style/EmptyMethod:
   Enabled: false
 
+# Disabling due to performance implications.
+# https://github.com/JuanitoFatas/fast-ruby/blob/master/code/proc-and-block/proc-call-vs-yield.rb
+Style/ExplicitBlockArgument:
+  Enabled: false
+
 # The Exclude list is not additive. Projects that exclude file names will
 # need to re-add Appraisals.
 Naming/FileName:
