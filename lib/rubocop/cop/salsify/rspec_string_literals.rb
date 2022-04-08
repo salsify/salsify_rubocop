@@ -14,6 +14,7 @@ module RuboCop
       class RspecStringLiterals < RuboCop::Cop::RSpec::Base
         extend RuboCop::Cop::AutoCorrector
         include ConfigurableEnforcedStyle
+        include StringHelp
         include StringLiteralsHelp
 
         DOCUMENTED_METHODS = RuboCop::Cop::Salsify::RspecDocString::DOCUMENTED_METHODS
