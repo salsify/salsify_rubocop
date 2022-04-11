@@ -26,9 +26,6 @@ Salsify/RailsUnscoped:
   Enabled: true
 
 # Disabled for v2.4.0 -> v2.12.0 upgrade.
-Lint/NumberConversion:
-  Enabled: false
-
 Rails/ActiveRecordCallbacksOrder:
   Enabled: false
 
@@ -72,9 +69,6 @@ Rails/IndexWith:
   Enabled: false
 
 Rails/Inquiry:
-  Enabled: false
-
-Rails/MailerName:
   Enabled: false
 
 Rails/MatchRoute:
