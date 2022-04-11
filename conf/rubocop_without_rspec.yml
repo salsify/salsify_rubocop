@@ -328,3 +328,4 @@ Style/SelectByRegexp:
 
 Style/TopLevelMethodDefinition:
   Enabled: false
+# End updates for v1.13.0 -> v1.27.0 version bump.

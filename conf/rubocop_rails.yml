@@ -24,3 +24,119 @@ Rails/UniqBeforePluck:
 
 Salsify/RailsUnscoped:
   Enabled: true
+
+# Disabled for v2.4.0 -> v2.12.0 upgrade.
+Lint/NumberConversion:
+  Enabled: false
+
+Rails/ActiveRecordCallbacksOrder:
+  Enabled: false
+
+Rails/AddColumnIndex:
+  Enabled: false
+
+Rails/AfterCommitOverride:
+  Enabled: false
+
+Rails/ArelStar:
+  Enabled: false
+
+Rails/AttributeDefaultBlockValue:
+  Enabled: false
+
+Rails/ContentTag:
+  Enabled: false
+
+Rails/DefaultScope:
+  Enabled: false
+
+Rails/EagerEvaluationLogMessage:
+  Enabled: false
+
+Rails/EnvironmentVariableAccess:
+  Enabled: false
+
+Rails/ExpandedDateRange:
+  Enabled: false
+
+Rails/FindById:
+  Enabled: false
+
+Rails/I18nLocaleAssignment:
+  Enabled: false
+
+Rails/IndexBy:
+  Enabled: false
+
+Rails/IndexWith:
+  Enabled: false
+
+Rails/Inquiry:
+  Enabled: false
+
+Rails/MailerName:
+  Enabled: false
+
+Rails/MatchRoute:
+  Enabled: false
+
+Rails/NegateInclude:
+  Enabled: false
+
+Rails/OrderById:
+  Enabled: false
+
+Rails/Pick:
+  Enabled: false
+
+Rails/Pluck:
+  Enabled: false
+
+Rails/PluckId:
+  Enabled: false
+
+Rails/PluckInWhere:
+  Enabled: false
+
+Rails/RedundantForeignKey:
+  Enabled: false
+
+Rails/RedundantTravelBack:
+  Enabled: false
+
+Rails/RenderInline:
+  Enabled: false
+
+Rails/RenderPlainText:
+  Enabled: false
+
+Rails/RequireDependency:
+  Enabled: false
+
+Rails/ReversibleMigrationMethodDefinition:
+  Enabled: false
+
+Rails/ShortI18n:
+  Enabled: false
+
+Rails/SquishedSQLHeredocs:
+  Enabled: false
+
+Rails/TimeZoneAssignment:
+  Enabled: false
+
+Rails/UniqueValidationWithoutIndex:
+  Enabled: false
+
+Rails/UnusedIgnoredColumns:
+  Enabled: false
+
+Rails/WhereEquals:
+  Enabled: false
+
+Rails/WhereExists:
+  Enabled: false
+
+Rails/WhereNot:
+  Enabled: false
+# End updates for v2.4.0 -> v2.12.0 upgrade.
