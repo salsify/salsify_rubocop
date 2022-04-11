@@ -1,6 +1,8 @@
 # salsify_rubocop
 
-## 1.3.0
+## 1.27.0
+- Note: Previous versions had drifted from the documented versioning scheme,
+  which states that versions should match the shipped version of `rubocop`.
 - Upgrade to `rubocop` v1.27.0 with support for Ruby 3.1.
 
 ## 1.2.0
