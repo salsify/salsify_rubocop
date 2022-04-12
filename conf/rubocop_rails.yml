@@ -71,6 +71,9 @@ Rails/IndexWith:
 Rails/Inquiry:
   Enabled: false
 
+Rails/MailerName:
+  Enabled: false
+
 Rails/MatchRoute:
   Enabled: false
 
