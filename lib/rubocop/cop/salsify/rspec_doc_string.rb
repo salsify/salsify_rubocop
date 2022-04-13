@@ -28,12 +28,41 @@ module RuboCop
         DOUBLE_QUOTE_MSG =
           'Example Group/Example doc strings must be double-quoted.'
 
-
-        DOCUMENTED_METHODS = RuboCop::ConfigLoader.default_configuration.for_department('RSpec')
-                               .fetch('Language')
-                               .values_at('ExampleGroups', 'Examples', 'SharedGroups', 'Includes')
-                               .flat_map { |element| element.values.flatten }
-                               .map(&:to_sym)
+        DOCUMENTED_METHODS = [
+          :context,
+          :describe,
+          :example,
+          :example_group,
+          :fcontext,
+          :fdescribe,
+          :feature,
+          :fexample,
+          :ffeature,
+          :fit,
+          :focus,
+          :fscenario,
+          :fspecify,
+          :include_context,
+          :include_examples,
+          :it,
+          :it_behaves_like,
+          :it_should_behave_like,
+          :its,
+          :pending,
+          :scenario,
+          :shared_context,
+          :shared_examples,
+          :shared_examples_for,
+          :skip,
+          :specify,
+          :xcontext,
+          :xdescribe,
+          :xexample,
+          :xfeature,
+          :xit,
+          :xscenario,
+          :xspecify
+        ].freeze
 
         def_node_matcher :documented_method?,
                          send_pattern(<<~PATTERN)

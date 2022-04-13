@@ -240,3 +240,92 @@ Style/RedundantSelfAssignment:
 
 Style/SingleArgumentDig:
   Enabled: false
+
+# Added for v1.13.0 -> v1.27.0 version bump.
+Bundler/GemFilename:
+  Enabled: false
+
+Bundler/GemVersion:
+  Enabled: false
+
+Gemspec/RequireMFA:
+  Enabled: false
+
+Layout/LineEndStringConcatenationIndentation:
+  Enabled: false
+
+Layout/SingleLineBlockChain:
+  Enabled: false
+
+Lint/AmbiguousOperatorPrecedence:
+  Enabled: false
+
+Lint/AmbiguousRange:
+  Enabled: false
+
+Lint/EmptyInPattern:
+  Enabled: false
+
+Lint/IncompatibleIoSelectWithFiberScheduler:
+  Enabled: false
+
+Lint/RefinementImportMethods:
+  Enabled: false
+
+Lint/RequireRelativeSelfPath:
+  Enabled: false
+
+Lint/UselessRuby2Keywords:
+  Enabled: false
+
+Naming/BlockForwarding:
+  Enabled: false
+
+Naming/InclusiveLanguage:
+  Enabled: false
+
+Security/IoMethods:
+  Enabled: false
+
+Style/FileRead:
+  Enabled: false
+
+Style/FileWrite:
+  Enabled: false
+
+Style/InPatternThen:
+  Enabled: false
+
+Style/MapToHash:
+  Enabled: false
+
+Style/MultilineInPatternThen:
+  Enabled: false
+
+Style/NestedFileDirname:
+  Enabled: false
+
+Style/NumberedParameters:
+  Enabled: false
+
+Style/NumberedParametersLimit:
+  Enabled: false
+
+Style/OpenStructUse:
+  Enabled: false
+
+Style/QuotedSymbols:
+  Enabled: false
+
+Style/RedundantInitialize:
+  Enabled: false
+
+Style/RedundantSelfAssignmentBranch:
+  Enabled: false
+
+Style/SelectByRegexp:
+  Enabled: false
+
+Style/TopLevelMethodDefinition:
+  Enabled: false
+# End updates for v1.13.0 -> v1.27.0 version bump.

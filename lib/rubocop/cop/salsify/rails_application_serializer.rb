@@ -16,8 +16,9 @@ module RuboCop
       #  class Yugo < ActiveModel::Serializer
       #    ...
       #  end
-      class RailsApplicationSerializer < Cop
+      class RailsApplicationSerializer < RuboCop::Cop::Base
         extend TargetRailsVersion
+        extend RuboCop::Cop::AutoCorrector
 
         minimum_target_rails_version 5.0
 

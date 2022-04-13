@@ -4,11 +4,17 @@ describe RuboCop::Cop::Salsify::RspecDotNotSelfDot, :config do
   let(:msgs) { [described_class::MSG] }
 
   let(:example_group_methods) do
-    RuboCop::RSpec::Language.config['ExampleGroups'].values.flatten
+    RuboCop::RSpec::Language.config['ExampleGroups']
+                            .values_at('Regular', 'Skipped', 'Focused')
+                            .flatten
+                            .compact
   end
 
   let(:example_methods) do
-    RuboCop::RSpec::Language.config['Examples'].values.flatten
+    RuboCop::RSpec::Language.config['Examples']
+                            .values_at('Regular', 'Skipped', 'Focused', 'Pending')
+                            .flatten
+                            .compact
   end
 
   before do

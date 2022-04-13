@@ -1,5 +1,13 @@
 # salsify_rubocop
 
+## 1.27.0
+- Note: Previous versions had drifted from the documented versioning scheme,
+  which states that versions should match the shipped version of `rubocop`.
+- Upgrade to `rubocop` v1.27.0 with support for Ruby 3.1.
+- Upgrade `rubocop-rails` to v2.12.0.
+- Upgrade `rubocop-rspec` to v2.9.0.
+- Upgrade `rubocop-performance` to v1.12.0.
+
 ## 1.2.0
 - Disable Style/ExplicitBlockArgument for performance reasons, https://github.com/JuanitoFatas/fast-ruby/blob/master/code/proc-and-block/proc-call-vs-yield.rb.
 

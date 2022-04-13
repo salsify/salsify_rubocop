@@ -16,8 +16,9 @@ module RuboCop
       #  class Yugo < ActionMailer::Base
       #    ...
       #  end
-      class RailsApplicationMailer < Cop
+      class RailsApplicationMailer < RuboCop::Cop::Base
         extend TargetRailsVersion
+        extend RuboCop::Cop::AutoCorrector
 
         minimum_target_rails_version 5.0
 
