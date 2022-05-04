@@ -232,6 +232,10 @@ Style/HashAsLastArrayItem:
 Style/HashEachMethods:
   Enabled: false
 
+# Allow both { foo: } and { foo: foo }
+Style/HashSyntax:
+  EnforcedShorthandSyntax: either
+
 Style/OptionalBooleanParameter:
   Enabled: false
 
