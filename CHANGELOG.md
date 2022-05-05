@@ -1,5 +1,8 @@
 # salsify_rubocop
 
+## 1.27.1
+- Set `Style/HashSyntax` option `EnforcedShorthandSyntax: either`, allowing both `{ foo: }` and `{ foo: foo }`
+
 ## 1.27.0
 - Note: Previous versions had drifted from the documented versioning scheme,
   which states that versions should match the shipped version of `rubocop`.
