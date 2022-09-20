@@ -1,0 +1,17 @@
+require: 
+  - rubocop-i18n
+
+# Use Rails i18n style
+I18n/GetText:
+  Enabled: false
+I18n/RailsI18n:
+  Enabled: true
+
+# Use the most aggressive sentence type
+# Allow un-localized exceptions
+# Note: this cop is patched in this gem to ignore log lines
+I18n/RailsI18n/DecorateString:
+  EnforcedSentenceType: fragment
+  IgnoreExceptions: true
+  Exclude:
+    - 'spec/**/*'
