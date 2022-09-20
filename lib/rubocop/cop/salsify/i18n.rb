@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'rubocop-i18n'
+
 module RuboCop
   module Cop
     module I18n

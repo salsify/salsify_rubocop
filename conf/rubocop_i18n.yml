@@ -1,5 +1,6 @@
 require: 
   - rubocop-i18n
+  - ../lib/rubocop/cop/salsify/i18n.rb
 
 # Use Rails i18n style
 I18n/GetText:
