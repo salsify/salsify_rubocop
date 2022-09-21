@@ -38,8 +38,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec_junit_formatter'
 
   spec.add_runtime_dependency 'rubocop', '~> 1.27.0'
+  spec.add_runtime_dependency 'rubocop-i18n', '= 3.0.0'
   spec.add_runtime_dependency 'rubocop-performance', '~> 1.12.0'
   spec.add_runtime_dependency 'rubocop-rails', '~> 2.12.0'
   spec.add_runtime_dependency 'rubocop-rspec', '~> 2.9.0'
-  spec.add_runtime_dependency 'rubocop-i18n', '= 3.0.0' # Locked version because we patch this gem
 end
