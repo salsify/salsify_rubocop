@@ -1,7 +1,7 @@
 # salsify_rubocop
 
 ## 1.28.0
-- Add `rubocop-i18n` and attendant configuration, disabled by default
+- Add `rubocop-i18n` and attendant configuration, disabled by default - see README for enablement instructions
 
 ## 1.27.1
 - Set `Style/HashSyntax` option `EnforcedShorthandSyntax: either`, allowing both `{ foo: }` and `{ foo: foo }`

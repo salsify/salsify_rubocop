@@ -43,6 +43,15 @@ inherit_gem:
   salsify_rubocop: conf/rubocop_rails.yml
 ```
 
+To enable i18n linting, include `conf/rubocop_i18n.yml` as well:
+
+```yaml
+inherit_gem:
+  salsify_rubocop:
+    - conf/rubocop_rails.yml
+    - conf/rubocop_i18n.yml
+```
+
 Further customization of RuboCop for your local project may also be added to
 this file.
 
