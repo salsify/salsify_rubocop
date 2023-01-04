@@ -179,7 +179,7 @@ Layout/LineLength:
   Enabled: true
   Max: 120
   IgnoreCopDirectives: true
-  IgnoredPatterns:
+  AllowedPatterns:
     - ^#
 
 Metrics/MethodLength:

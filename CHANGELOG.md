@@ -1,5 +1,11 @@
 # salsify_rubocop
 
+## 1.42.0
+- Upgrade `rubocop` to v1.42.0.
+- Upgrade `rubocop-performance` to v1.15.2.
+- Upgrade `rubocop-rails` to v2.17.4.
+- Upgrade `rubocop-rspec` to v2.16.0.
+
 ## 1.27.1
 - Set `Style/HashSyntax` option `EnforcedShorthandSyntax: either`, allowing both `{ foo: }` and `{ foo: foo }`
 
@@ -39,7 +45,7 @@
 
 ## 0.85.0
 - Upgrade to `rubocop` v0.85.0
-- Enable enforcement of Gem comments when specifying versions or sources 
+- Enable enforcement of Gem comments when specifying versions or sources
 - Drop support for Ruby 2.3, as rubocop v0.81+ doesn't support it anymore
 - Add `FrozenStringLiteralComment` and `LineLength` (max 120) rules.
 
