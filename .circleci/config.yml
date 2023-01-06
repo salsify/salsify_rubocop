@@ -2,14 +2,14 @@ version: 2.1
 jobs:
   lint:
     docker:
-      - image: salsify/ruby_ci:2.6.6
+      - image: salsify/ruby_ci:2.7.7
     working_directory: ~/salsify_rubocop
     steps:
       - checkout
       - restore_cache:
           keys:
-            - v1-gems-ruby-2.6.6-{{ checksum "salsify_rubocop.gemspec" }}-{{ checksum "Gemfile" }}
-            - v1-gems-ruby-2.6.6-
+            - v1-gems-ruby-2.7.7-{{ checksum "salsify_rubocop.gemspec" }}-{{ checksum "Gemfile" }}
+            - v1-gems-ruby-2.7.7-
       - run:
           name: Install Gems
           command: |
