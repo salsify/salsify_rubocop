@@ -1,5 +1,9 @@
 # salsify_rubocop
 
+## 1.42.1
+- Drop support for Ruby 2.6 as it is EOL
+- Add support for Ruby 3.2
+
 ## 1.42.0
 - Upgrade `rubocop` to v1.42.0.
 - Upgrade `rubocop-performance` to v1.15.2.
