@@ -26,6 +26,7 @@ Bundler/GemComment:
 Gemspec/RequiredRubyVersion:
   Exclude:
     - schemas_gem/*_schemas.gemspec
+    - manifests_gem/*_manifests.gemspec
 
 # This cop has poor handling for the common case of a lambda arg in a DSL
 Lint/AmbiguousBlockAssociation:
