@@ -1,5 +1,8 @@
 # salsify_rubocop
 
+## 1.59.0
+- Upgrade `rubocop` to v1.59.0 to support Ruby 3.3.
+
 ## 1.43.1
 - Add configuration for `Gemspec/RequiredRubyVersion` cop for configuration manifest embedded gems
 
