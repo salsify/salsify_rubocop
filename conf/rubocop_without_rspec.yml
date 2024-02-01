@@ -23,6 +23,9 @@ Bundler/GemComment:
     - 'github'
     - 'gist'
 
+Gemspec/DevelopmentDependencies:
+  Enabled: false
+
 Gemspec/RequiredRubyVersion:
   Exclude:
     - schemas_gem/*_schemas.gemspec
