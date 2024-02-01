@@ -1,5 +1,8 @@
 # salsify_rubocop
 
+## 1.59.1
+- Disable the `Gemspec/DevelopmentDependencies` cop as it goes against our current pattern for development dependencies on gems. 
+
 ## 1.59.0
 - Upgrade `rubocop` to v1.59.0 to support Ruby 3.3.
 
