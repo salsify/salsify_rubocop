@@ -1,5 +1,9 @@
 # salsify_rubocop
 
+## 1.59.1
+- Add Rake specific checks:
+  - Methods shouldn't be defined namespaces as the scope is misleading and they are still defined at the top level
+
 ## 1.59.0
 - Upgrade `rubocop` to v1.59.0 to support Ruby 3.3.
 
