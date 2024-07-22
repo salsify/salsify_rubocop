@@ -1,7 +1,7 @@
 # salsify_rubocop
 
 ## 1.59.1
-- Add Rake specific checks with the [official extension, rubocop-rake(https://docs.rubocop.org/rubocop/extensions.html#official-extensions):
+- Add Rake specific checks with the [official extension, rubocop-rake](https://docs.rubocop.org/rubocop/extensions.html#official-extensions):
   - Enforce description (`desc`) for rake tasks, as otherwise they are not listed when `rake -T` is called
   - No duplicate namespace/task names
   - Methods/Classes shouldn't be defined inside namespaces, it's misleading because they are defined at the top level
