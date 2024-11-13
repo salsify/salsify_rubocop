@@ -1,5 +1,8 @@
 # salsify_rubocop
 
+## 1.68.0
+- Upgrade `rubocop` to v1.68.0.
+
 ## 1.59.1
 - Add Rake specific checks with the [official extension, rubocop-rake](https://docs.rubocop.org/rubocop/extensions.html#official-extensions):
   - Enforce description (`desc`) for rake tasks, as otherwise they are not listed when `rake -T` is called
