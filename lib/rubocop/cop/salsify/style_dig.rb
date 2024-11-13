@@ -18,10 +18,8 @@ module RuboCop
       #   my_hash['foo'] && my_hash['foo']['bar']
       #   my_array[0][1]
 
-      class StyleDig < Cop
-        extend TargetRubyVersion
-
-        minimum_target_ruby_version 2.3
+      class StyleDig < ::RuboCop::Cop::Base
+        extend RuboCop::Cop::AutoCorrector
 
         MSG = 'Use `dig` for nested access.'
 
@@ -35,7 +33,9 @@ module RuboCop
           match_node = node
           # walk to outermost access node
           match_node = match_node.parent while access_node?(match_node.parent)
-          add_offense(match_node, location: :expression, message: MSG)
+          add_offense(match_node, message: MSG) do |corrector|
+            autocorrect(match_node)[corrector]
+          end
         end
 
         def autocorrect(node)
