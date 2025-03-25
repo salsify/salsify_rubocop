@@ -1,5 +1,8 @@
 # salsify_rubocop
 
+## 1.74.0
+- Upgrade `rubocop` to v1.74.0.
+
 ## 1.68.0
 - Upgrade `rubocop` to v1.68.0.
 

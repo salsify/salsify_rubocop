@@ -37,7 +37,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rspec_junit_formatter'
 
-  spec.add_runtime_dependency 'rubocop', '~> 1.68.0'
+  spec.add_runtime_dependency 'rubocop', '~> 1.74.0'
   spec.add_runtime_dependency 'rubocop-performance', '~> 1.15.2'
   spec.add_runtime_dependency 'rubocop-rails', '~> 2.17.4'
   spec.add_runtime_dependency 'rubocop-rake', '~> 0.6.0'
