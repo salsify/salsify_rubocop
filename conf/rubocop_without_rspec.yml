@@ -180,7 +180,7 @@ Metrics/CyclomaticComplexity:
 Layout/LineLength:
   Enabled: true
   Max: 120
-  AllowCopDirectives: false
+  AllowCopDirectives: true
   AllowedPatterns:
     - ^#
 
