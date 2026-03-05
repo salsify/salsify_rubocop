@@ -180,7 +180,7 @@ Metrics/CyclomaticComplexity:
 Layout/LineLength:
   Enabled: true
   Max: 120
-  IgnoreCopDirectives: true
+  AllowCopDirectives: false
   AllowedPatterns:
     - ^#
 
@@ -325,6 +325,9 @@ Style/QuotedSymbols:
 
 Style/RedundantInitialize:
   Enabled: false
+
+Style/RedundantParentheses:
+  Enabled: false  
 
 Style/RedundantSelfAssignmentBranch:
   Enabled: false
