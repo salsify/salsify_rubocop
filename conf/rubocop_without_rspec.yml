@@ -234,9 +234,9 @@ Style/HashAsLastArrayItem:
 Style/HashEachMethods:
   Enabled: false
 
-# Allow both { foo: } and { foo: foo }
+# Enforce { foo: } shorthand over { foo: foo } (Ruby 3.1+)
 Style/HashSyntax:
-  EnforcedShorthandSyntax: either
+  EnforcedShorthandSyntax: always
 
 Style/OptionalBooleanParameter:
   Enabled: false
