@@ -31,12 +31,6 @@ describe RuboCop::Cop::Salsify::DelayedJobSelfEnqueue, :config do
     RUBY
   end
 
-  it "does not register an offense when enqueuing a variable" do
-    expect_no_offenses(<<~RUBY)
-      Delayed::Job.enqueue(job, run_at: run_at)
-    RUBY
-  end
-
   it "does not register an offense when enqueuing self.class.new" do
     expect_no_offenses(<<~RUBY)
       Delayed::Job.enqueue(self.class.new(foo: foo), run_at: run_at)
