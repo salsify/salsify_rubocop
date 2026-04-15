@@ -1,5 +1,8 @@
 # salsify_rubocop
 
+## Unreleased
+- Add `Salsify/DelayedJobSelfEnqueue` cop to detect `Delayed::Job.enqueue(self, ...)`, which serializes memoized AR objects and can cause `Delayed::DeserializationError` if those records are deleted before the job runs.
+
 ## 1.85.1
 - Upgrade `rubocop` to v1.85.1.
 
