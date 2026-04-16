@@ -20,7 +20,7 @@ module RuboCop
       class RspecDotNotSelfDot < RuboCop::Cop::RSpec::Base
         extend RuboCop::Cop::AutoCorrector
 
-        SELF_DOT_REGEXP = /["']self\./.freeze
+        SELF_DOT_REGEXP = /["']self\./
         MSG = 'Use ".<class method>" instead of "self.<class method>" for example group description.'
 
         def_node_matcher :example_group_match, <<-PATTERN

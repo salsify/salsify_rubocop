@@ -45,3 +45,8 @@ Salsify/StyleDig:
   Enabled: true
   AutoCorrect: false
 
+Salsify/DelayedJobSelfEnqueue:
+  Description: 'Do not pass `self` to `Delayed::Job.enqueue` to avoid serializing memoized AR objects.'
+  Enabled: true
+  AutoCorrect: false
+
