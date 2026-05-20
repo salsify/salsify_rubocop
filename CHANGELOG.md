@@ -1,5 +1,11 @@
 # salsify_rubocop
 
+## 1.85.3
+- Enable `Style/HashSyntax` with `EnforcedShorthandSyntax: always`.
+  Hashes whose keys match their values must now use shorthand
+  (`{ foo: }` rather than `{ foo: foo }`). Autocorrectable with
+  `rubocop -a`.
+
 ## 1.85.2
 - Add `Salsify/DelayedJobSelfEnqueue` cop to detect `Delayed::Job.enqueue(self, ...)`, which serializes memoized AR objects and can cause `Delayed::DeserializationError` if those records are deleted before the job runs.
 - Drop support for Ruby < 3.3

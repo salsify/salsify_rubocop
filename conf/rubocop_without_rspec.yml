@@ -234,9 +234,9 @@ Style/HashAsLastArrayItem:
 Style/HashEachMethods:
   Enabled: false
 
-# Allow both { foo: } and { foo: foo }
+# Enforce the shorthand syntax where the key matches the value.
 Style/HashSyntax:
-  EnforcedShorthandSyntax: either
+  EnforcedShorthandSyntax: always
 
 Style/OptionalBooleanParameter:
   Enabled: false
