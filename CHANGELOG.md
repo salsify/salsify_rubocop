@@ -1,5 +1,8 @@
 # salsify_rubocop
 
+## 1.92.0
+- Upgrade `rubocop` to v1.92.3.
+
 ## 1.85.3
 - Enable `Style/HashSyntax` with `EnforcedShorthandSyntax: always`.
   Hashes whose keys match their values must now use shorthand
